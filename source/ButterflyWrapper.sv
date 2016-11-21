@@ -124,8 +124,6 @@ module ButterflyWrapper
 	output reg [15:0] output_32_real,
 	output reg [15:0] output_32_imaginary
 );
-
-	always_comb begin
 		
 		butterfly_block b1 (.input_1_real(input_1_real),.input_1_imaginary(input_1_imaginary),.input_2_real(input_2_real),.input_2_imaginary(input_2_imaginary),
 							.twiddle_real(twiddle1_real),.twiddle_imaginary(twiddle1_imaginary),
@@ -158,6 +156,5 @@ module ButterflyWrapper
 		butterfly_block b8 (.input_1_real(input_15_real),.input_1_imaginary(input_15_imaginary),.input_2_real(input_16_real),.input_2_imaginary(input_16_imaginary),
 							.twiddle_real(twiddle8_real),.twiddle_imaginary(twiddle8_imaginary),
 							.output_1_real(output_15_real),.output_1_imaginary(output_15_imaginary),.output_2_real(output_16_real),.output_2_imaginary(output_16_imaginary));
-		
-	end
+
 endmodule
