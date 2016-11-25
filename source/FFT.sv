@@ -21,7 +21,6 @@ module fft
 		.clk(clk),
 		.n_reset(n_reset),
 		.input_ena(input_ena),
-		.clear(clear),
 		.iter_strobe(iter_strobe),
 		.it_count_strobe(it_count_strobe),
 		.samples_in_count_out(samples_in_count_out)
@@ -40,7 +39,6 @@ module fft
 	(
 		.clk(clk),
 		.n_reset(n_reset),
-		.clear(0)
 		.stage_strobe(stage_strobe),
 		.iteration_count_out(iteration_count_out)
 	);
@@ -56,7 +54,6 @@ module fft
 		.clk(clk),
 		.n_reset(n_reset),
 		.stage_strobe(stage_strobe),
-		.clear(0),
 		.stage_done(stage_done),
 		.stage_count_out(stage_count_out)
 	);
@@ -72,7 +69,6 @@ module fft
 		.clk(clk),
 		.n_reset(n_reset),
 		.output_ena(output_ena),
-		.clear(0),
 		.output_done(output_done),
 		.output_strobe(output_strobe),
 		.samples_out_count_out(samples_out_count_out)

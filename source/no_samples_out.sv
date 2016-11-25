@@ -11,22 +11,21 @@ module no_samples_out
 	input wire clk,
 	input wire n_reset,
 	input wire output_ena,
-	input wire clear,
 	output reg output_done,
 	output reg output_strobe,
-	output reg [4:0] samples_out_count_out
+	output reg [5:0] samples_out_count_out
 	
 
 );
 	
-	flex_counter #(5) out_samples
+	flex_counter #(6) out_samples
 	(
 		.clk(clk), 
 		.n_rst(n_reset),
-		.clear(clear),
+		.clear(output_done),
 		.count_enable(output_ena),
 		.count_out(samples_out_count_out),
-		.rollover_val(32), 
+		.rollover_val(6'd32), 
 		.rollover_flag(output_done)
 	);
 	

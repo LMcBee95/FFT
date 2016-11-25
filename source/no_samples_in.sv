@@ -11,25 +11,24 @@ module no_samples_in
 	input wire clk,
 	input wire n_reset,
 	input wire input_ena,
-	input wire clear,
 	output reg iter_strobe,
 	output reg it_count_strobe,
-	output reg [5:0] samples_in_count_out
+	output reg [6:0] samples_in_count_out
 
 );
 	
-	flex_counter #(6) in_samples
+	flex_counter #(7) in_samples
 	(
 		.clk(clk), 
 		.n_rst(n_reset),
-		.clear(clear),
+		.clear(iter_strobe),
 		.count_enable(input_ena),
 		.count_out(samples_in_count_out),
-		.rollover_val(48), //Count up to 48
+		.rollover_val(7'd48), //Count up to 48
 		.rollover_flag(iter_strobe)
 	);
 
-	assign it_count_strobe = cnt_up; //When the next data sample is loaded clock the input shift register to load in the next value
+	assign it_count_strobe = iter_strobe; //When the next data sample is loaded clock the input shift register to load in the next value
 
 endmodule
 

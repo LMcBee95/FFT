@@ -11,20 +11,19 @@ module no_stages
 	input wire clk,
 	input wire n_reset,
 	input wire stage_strobe,
-	input wire clear,
 	output reg stage_done,
-	output reg [2:0] stage_count_out
+	output reg [3:0] stage_count_out
 
 );
 	
-	flex_counter #(3) stage
+	flex_counter #(4) stage
 	(
 		.clk(clk), 
 		.n_rst(n_reset),
-		.clear(clear),
+		.clear(stage_done),
 		.count_enable(stage_strobe),
 		.count_out(stage_count_out),
-		.rollover_val(8), //Rollover at 8 because that is the number of stages needed for a 256 point FFT
+		.rollover_val(4'd8), //Rollover at 8 because that is the number of stages needed for a 256 point FFT
 		.rollover_flag(stage_done)
 	);
 
