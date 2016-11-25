@@ -4,9 +4,9 @@
 
 module fixed_point_math
 (
-	input wire [15:0] input1;
-	input wire [15:0] input2;
-	output wire [15:0] product;
+	input wire [15:0] input1,
+	input wire [15:0] input2,
+	output wire [15:0] product
 
 );
 
@@ -17,7 +17,6 @@ module fixed_point_math
 
 	reg sign;
 	reg [29:0] temp_product;	
-	reg num_decimal;
 
 	always_comb
 	begin
@@ -28,6 +27,6 @@ module fixed_point_math
 
 	end
 
-	assign product = {sign, temp_product[29 - num_decimal:num_fraction];
+	assign product = {sign, temp_product[29 -num_decimal:num_fraction]};
 
 endmodule

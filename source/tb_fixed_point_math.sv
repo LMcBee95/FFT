@@ -8,24 +8,18 @@ module tb_fixed_point_math();
 	localparam CLK_PERIOD	= 10ns;
 
 	// Test bench dut port signals
-	reg [15:0] tb_input_1_real;
 	reg [15:0] tb_input1;
 	reg [15:0] tb_input2;
 	reg [15:0] tb_product;
 	
-	
-	// Test bench verification signals
-	//integer tb_test_case_num;
-	//reg expected_output;
-	//reg tb_prev_mid;
-	//reg tb_prev_fin;
 
-	//reg [7:0] byte_data;
+	//task check_integer;
+	
+
 
 	task load_fixed_point_math;
 		input logic [15:0] i1;
 		input logic [15:0] i2;
-		input logic [15:0] product;
 	begin
 		tb_input1 = i1;
 		tb_input2 = i2;
@@ -33,55 +27,56 @@ module tb_fixed_point_math();
 	endtask
 	
 	// DUT portmap
-	fixe_point_math DUT(
+	fixed_point_math DUT(
 		.input1(tb_input1),
 		.input2(tb_input2),
+		.product(tb_product)
 	);	
 	// Test bench process
 	initial
 	begin
-		//Test 1
-		load_fixed_point_math(1, 1);
+		//Test 1 : 0.5 * 0.5 = 0.25
+		load_fixed_point_math(16'b0000000010000000, 16'b0000000010000000);
 
 		#(1);
 
-		$info("input 1 = %d | input 2 = %d | product = %d", tb_input1, tb_input2, tb_product);
+		$info("input 1 = %b | input 2 = %b | product = %b", tb_input1, tb_input2, tb_product);
 
 
-		//Test 2
-		load_fixed_point_math(0, 0);
+		//Test 2 : 1 * 0.5 = ?
+		load_fixed_point_math(16'b0000000100000000, 16'b0000000010000000);
 
-		#(1);
+		#(100);
 
-		$info("input 1 = %d | input 2 = %d | product = %d", tb_input1, tb_input2, tb_product);
+		$info("input 1 = %b | input 2 = %b | product = %b", tb_input1, tb_input2, tb_product);
 
-		//Test 3
-		load_fixed_point_math(16'b11111110000000000, 16'b11111110000000000);
-
-		#(1);
-
-		$info("input 1 = %d | input 2 = %d | product = %d", tb_input1, tb_input2, tb_product);
-
-		//Test 4
-		load_fixed_point_math(2, 2);
+		//Test 3 : 3 * 3 = 9
+		load_fixed_point_math(16'b0000001100000000, 16'b0000001100000000);
 
 		#(1);
 
-		$info("input 1 = %d | input 2 = %d | product = %d", tb_input1, tb_input2, tb_product);
+		$info("input 1 = %b | input 2 = %b | product = %b", tb_input1, tb_input2, tb_product);
+
+		//Test 4 : -3 * 3 = -9
+		load_fixed_point_math(16'b1000001100000000, 16'b0000001100000000);
+
+		#(1);
+
+		$info("input 1 = %b | input 2 = %b | product = %b", tb_input1, tb_input2, tb_product);
 
 		//Test 5
 		load_fixed_point_math(1, 1);
 
 		#(1);
 
-		$info("input 1 = %d | input 2 = %d | product = %d", tb_input1, tb_input2, tb_product);
+		$info("input 1 = %b | input 2 = %b | product = %b", tb_input1, tb_input2, tb_product);
 
 		//Test 6
 		load_fixed_point_math(1, 1);
 
 		#(1);
 
-		$info("input 1 = %d | input 2 = %d | product = %d", tb_input1, tb_input2, tb_product);
+		$info("input 1 = %b | input 2 = %b | product = %b", tb_input1, tb_input2, tb_product);
 
 
 	end
