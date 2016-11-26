@@ -19,9 +19,9 @@ tb_clk = 1'b1;
 #(CLK_PERIOD/2.0);
 end
 wire tb_n_rst;
-wire tb_rEn;
-wire [63:0]tb_address;
-wire [15:0]tb_wData;
+wire tb_slave_read;
+wire [8:0]tb_slave_address;
+wire [15:0]tb_slave_writedata;
 reg [15:0] tb_fft_init_data;
 reg [8:0] tb_wAddress;
 reg tb_fft_start;
@@ -30,31 +30,33 @@ reg tb_fft_start;
 integer tb_test_case;
 reg tb_test_rst;
 reg tb_sWriteEn;
-reg tb_test_rEn;
-reg tb_test_wEn;
-reg [63:0]tb_test_address;
-reg [15:0]tb_test_wData;
-
+reg tb_test_slave_read;
+reg tb_test_slave_write;
+reg [8:0]tb_test_slave_address;
+reg [15:0]tb_test_slave_writedata;
+reg tb_slave_chipselect,
 // DUT port map
 	avalonSlave DUT(
 			.clk(tb_clk),
 			.n_rst(tb_n_rst),
-			.rEn(tb_rEn),
-			.wEn(tb_wEn),
+			.slave_read(tb_slave_read),
+			.slave_write(tb_slave_write),
 			.sWriteEn(tb_sWriteEn),
-			.address(tb_address),
-			.wData(tb_wData),
+			.slave_address(tb_slave_address),
+			.slave_writedata(tb_slave_writedata),
 			.fft_init_data(tb_fft_init_data),
 			.wAddress(tb_wAddress),
-			.fft_start(tb_fft_start)
+			.fft_start(tb_fft_start),
+			.slave_chipselect(tb_slave_chipselect)
 		       );
 
 	// Connect individual test input bits to a vector for easier testing
 	assign tb_n_rst = tb_test_rst;
-	assign tb_rEn = tb_test_rEn;
-	assign tb_wEn = tb_test_wEn;
-	assign tb_address = tb_test_address;
-	assign tb_wData = tb_test_wData;
+	assign tb_slave_read = tb_test_slave_read;
+	assign tb_slave_write = tb_test_slave_write;
+	assign tb_slave_address = tb_test_slave_address;
+	assign tb_slave_writedata = tb_test_slave_writedata;
+	assign tb_slave_chipselect = tb_test_slave_chipselect;
 	/*	assign tb_n_rst					= tb_test_inputs[2];
 		assign tb_d_plus				= tb_test_inputs[1];
 		assign tb_shift_enable				= tb_test_inputs[0];
@@ -63,10 +65,11 @@ reg [15:0]tb_test_wData;
 	initial
 	begin
 	tb_test_case = 0;
-	tb_test_rEn = 1'b0;
-	tb_test_wEn = 1'b0;
-	tb_test_wData = 16'h0000;
-	tb_test_address = 64'h0000000000000000;
+	tb_test_slave_read = 1'b0;
+	tb_test_slave_write = 1'b0;
+	tb_test_slave_writedata = 16'h0000;
+	tb_test_slave_address = 9'h00;
+	tb_slave_chipselect = 1'b0;
 
 	tb_test_rst = 1'b1;
 #5;
@@ -77,13 +80,15 @@ reg [15:0]tb_test_wData;
 
 	for(tb_test_case =0; tb_test_case < 256;tb_test_case = tb_test_case +1)
 	begin
-	tb_test_wEn = 1'b1;
-	tb_test_address =tb_test_case;
-	tb_test_wData = 16'hf0f0;
+	tb_test_slave_write = 1'b1;
+	tb_test_slave_address =tb_test_case;
+	tb_test_slave_writedata = 16'hf0f0;
+	tb_slave_chipselect = 1'b1;
 #30;
-	tb_test_wEn = 1'b0;
-	tb_test_address =64'b0000000000000001;
-	tb_test_wData = 16'hf0f0;
+	tb_test_slave_write = 1'b0;
+	tb_test_slave_address =9'hxx;
+	tb_test_slave_writedata = 16'hf0f0;
+	tb_slave_chipselect = 1'b0;
 #10;
 	end
 
