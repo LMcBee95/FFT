@@ -1,0 +1,124 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : avalonMaster
+Version: K-2015.06-SP1
+Date   : Sat Nov 26 17:06:44 2016
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: samNum/count_out_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: master_address[9]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  samNum/count_out_reg[0]/CLK (DFFSR)                     0.00       0.00 r
+  samNum/count_out_reg[0]/Q (DFFSR)                       0.66       0.66 r
+  samNum/count_out[0] (flex_counter_NUM_CNT_BITS10)       0.00       0.66 r
+  U319/Y (NOR2X1)                                         0.29       0.95 f
+  U318/Y (INVX1)                                          0.31       1.26 r
+  U317/Y (OR2X1)                                          0.44       1.71 r
+  U316/Y (NOR2X1)                                         0.28       1.99 f
+  U315/Y (INVX1)                                          0.31       2.30 r
+  U314/Y (OR2X1)                                          0.44       2.74 r
+  U313/Y (NOR2X1)                                         0.28       3.02 f
+  U312/Y (INVX1)                                          0.31       3.33 r
+  U311/Y (OR2X1)                                          0.37       3.70 r
+  U310/Y (NOR2X1)                                         0.42       4.12 f
+  U308/Y (NAND3X1)                                        0.27       4.39 r
+  U307/Y (INVX1)                                          0.25       4.64 f
+  U305/Y (OAI21X1)                                        0.13       4.77 r
+  U304/Y (INVX1)                                          0.14       4.91 f
+  master_address_tri[9]/Y (TBUFX1)                        0.08       5.00 r
+  master_address[9] (out)                                 0.00       5.00 r
+  data arrival time                                                  5.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : avalonMaster
+Version: K-2015.06-SP1
+Date   : Sat Nov 26 17:06:44 2016
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:                          114
+Number of nets:                           389
+Number of cells:                          311
+Number of combinational cells:            237
+Number of sequential cells:                71
+Number of macros/black boxes:               0
+Number of buf/inv:                         48
+Number of references:                      16
+
+Combinational area:              61956.000000
+Buf/Inv area:                     6912.000000
+Noncombinational area:           39528.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                101484.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : avalonMaster
+Version: K-2015.06-SP1
+Date   : Sat Nov 26 17:06:44 2016
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+avalonMaster                              1.620    3.681   30.079    5.301 100.0
+  holdWrite (flex_counter_NUM_CNT_BITS2)
+                                       7.39e-02    0.361    3.141    0.435   8.2
+  samNum (flex_counter_NUM_CNT_BITS10)    0.128    1.231   16.642    1.360  25.6
+    add_52_aco (flex_counter_NUM_CNT_BITS10_DW01_inc_0)
+                                       2.73e-03 8.05e-03    2.339 1.08e-02   0.2
+1

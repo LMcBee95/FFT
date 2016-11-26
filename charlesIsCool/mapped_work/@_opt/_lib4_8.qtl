@@ -1,0 +1,471 @@
+;Ad0
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Amain_arch
+R13
+R14
+DEx4 work 8 lab7_tcu 0 22 >X]LaBVb1>]e;JO8jIV6;2
+l48
+L33
+VZ5a5C1<NNV67LVR?3N>=22
+!s100 Jf6g9c=`>c;AiZ97mHcoS3
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Elab7_timer
+R28
+R13
+R14
+R0
+Z35 8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/lab7_timer.vhd
+Z36 F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/lab7_timer.vhd
+l0
+L13
+V7Q9eE3lKjg;lmg5e36bId0
+!s100 g:J9bIj`gKBa_4czgf[o_1
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Amain_arch
+R13
+R14
+DEx4 work 10 lab7_timer 0 22 7Q9eE3lKjg;lmg5e36bId0
+l34
+L25
+VnhcD4W?=FGzL=gB`B^nm_0
+!s100 i1DVXYQ3ZgdY@GVCD6>k@0
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Elab7_tx_fifo
+R28
+R13
+R14
+R0
+Z37 8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/lab7_tx_fifo.vhd
+Z38 F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/lab7_tx_fifo.vhd
+l0
+L15
+V[C3:kSEFbh_mI2N]K238d2
+!s100 jc`7i57a4]9IlTPZKX=j`3
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Awrapper
+R13
+R14
+DEx4 work 12 lab7_tx_fifo 0 22 [C3:kSEFbh_mI2N]K238d2
+l46
+L29
+VWhM?EnzjF2PlR?FK4FmQT0
+!s100 f;LgXfYQ2lWMhb]HU[Ai42
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Elab7_tx_sr
+R28
+R13
+R14
+R0
+Z39 8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/lab7_tx_sr.vhd
+Z40 F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/lab7_tx_sr.vhd
+l0
+L13
+VbmAXfba5E6YjI5jTV21MR0
+!s100 I566m3H;<4l]Yc^TX[jdg0
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Aparallel_to_serial
+R13
+R14
+DEx4 work 10 lab7_tx_sr 0 22 bmAXfba5E6YjI5jTV21MR0
+l31
+L26
+VXk1EBajgfcQ836T6^_RYQ2
+!s100 a[]K=_F88MaXjdQ;e8E7b0
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Elab7_usb_transmitter
+R28
+R13
+R14
+R0
+Z41 8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/lab7_usb_transmitter.vhd
+Z42 F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/lab7_usb_transmitter.vhd
+l0
+L13
+VDBfk?HDUG[[kM=:RahUe>3
+!s100 I^TRD<IZ1GUCgnCH?UcUc3
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Atop_level
+R13
+R14
+DEx4 work 20 lab7_usb_transmitter 0 22 DBfk?HDUG[[kM=:RahUe>3
+l132
+L28
+V7mUOKOkhd^:Jn>f<;Y86>1
+!s100 WG4HMg?f8>A<n];<UAaj>3
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Eread_fifo_ctrl
+R12
+R24
+R25
+R13
+R14
+R0
+Z43 8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_fifo_ctrl.vhd
+Z44 F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_fifo_ctrl.vhd
+l0
+L19
+V;B2aPMSNZ:Y_O^3maT28U3
+!s100 Dmd>S>f<B>1Q2:I_GZAM22
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Artl
+R24
+R25
+R13
+R14
+DEx4 work 14 read_fifo_ctrl 0 22 ;B2aPMSNZ:Y_O^3maT28U3
+l55
+L31
+V`Off6JFI<j4>W14:@`eEM3
+!s100 K?2<JgfNeDT6ISdM<ih9h3
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Eread_ptr
+R12
+R24
+R25
+R13
+R14
+R0
+Z45 8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_ptr.vhd
+Z46 F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_ptr.vhd
+l0
+L19
+V5<]YP1jE8:SD^WFH?I4NL1
+!s100 2VeZKYWDG4Mi^J5FJoi@61
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Artl
+R24
+R25
+R13
+R14
+DEx4 work 8 read_ptr 0 22 5<]YP1jE8:SD^WFH?I4NL1
+l38
+L29
+VS`lkV=5^06T@dCW6GR6EE1
+!s100 R7>gNRQB_^dgB6D?^`^`F2
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+vregister_file
+R1
+R2
+!i10b 1
+!s100 L3c8dc8@ZT2zD1zojVl>V3
+I]9?ITRbZmjCd8DWEgTUR21
+R3
+!s105 register_file_sv_unit
+S1
+R0
+R11
+8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/register_file.sv
+F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/register_file.sv
+L0 9
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+Escalable_off_chip_sram
+Z47 w1446705187
+Z48 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R25
+R24
+R13
+R14
+R0
+Z49 8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/scalable_off_chip_sram.vhd
+Z50 F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/scalable_off_chip_sram.vhd
+l0
+L14
+VAc^QhK9Ml=^O=lVmNJlLX0
+!s100 f<<5G;K=aCzbR3GiYhVD10
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Astructural
+R48
+R25
+R24
+R13
+R14
+DEx4 work 22 scalable_off_chip_sram 0 22 Ac^QhK9Ml=^O=lVmNJlLX0
+l79
+L42
+V>_Q:L;1Ze>R[ZVoDd:^Bb1
+!s100 GW8bT28WO<Un6<i>?0o`11
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Esimple_scale_mem
+R47
+R48
+R25
+R24
+R13
+R14
+R0
+Z51 8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/simple_scale_mem.vhd
+Z52 F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/simple_scale_mem.vhd
+l0
+L16
+VTgZJ?BA<Z6K<f@YG6jfH;1
+!s100 iak9hQA5]]f2N02Qn5TJS2
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Ascaleable_memory
+R48
+R25
+R24
+R13
+R14
+DEx4 work 16 simple_scale_mem 0 22 TgZJ?BA<Z6K<f@YG6jfH;1
+l258
+L46
+V@RXE^cM?CZan3F<ZR=cXE3
+!s100 1lLS7CRf;k;VIziDhaRnI1
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Ewrite_fifo_ctrl
+R12
+R24
+R25
+R13
+R14
+R0
+Z53 8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_fifo_ctrl.vhd
+Z54 F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_fifo_ctrl.vhd
+l0
+L19
+VR`Df>HWlBfGJ_LHIU_e792
+!s100 z>OWYdPodl]G_9dkoEl]i1
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Artl
+R24
+R25
+R13
+R14
+DEx4 work 15 write_fifo_ctrl 0 22 R`Df>HWlBfGJ_LHIU_e792
+l55
+L32
+VU<7IH3<KRCG`bO2>PYUIG2
+!s100 <Kn83I5;zL7Yi><e:Ea820
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Ewrite_ptr
+R12
+R24
+R25
+R13
+R14
+R0
+Z55 8/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_ptr.vhd
+Z56 F/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_ptr.vhd
+l0
+L19
+VEfD98z?TR;2kEbh@TRA<M2
+!s100 ]TMKeMD[KcLF<fC_YdV:03
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Artl
+R24
+R25
+R13
+R14
+DEx4 work 9 write_ptr 0 22 EfD98z?TR;2kEbh@TRA<M2
+l38
+L29
+Vge57@Q5mjj0NLcA5GHkAB0
+!s100 ^ifZY@mA:5IlY=[I:2<]A1
+R17
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23

@@ -1,0 +1,155 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegrid/a/mg103/ece337/finalProject/FFT/charlesIsCool
+T_opt
+!s110 1480189172
+V2UJBOHz@af28ibaoZ>HOl2
+04 12 4 work flex_counter fast 0
+=1-3417ebaebb0d-5839e4f2-521f7-1338
+o-quiet -auto_acc_if_foreign -work source_work/ -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim +acc
+n@_opt
+Z1 OL;O;10.3b;59
+R0
+T_opt1
+!s110 1480196868
+VI6Aj>zNnTNSS4zi]9nSE^2
+04 14 4 work tb_avalonSlave fast 0
+=1-3417ebaebb0d-583a0304-15e8a-2ebd
+Z2 o-quiet -auto_acc_if_foreign -work source_work -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim +acc
+n@_opt1
+R1
+R0
+T_opt2
+!s110 1480197744
+VT3mVfDP:jJYDD^4?QZa311
+04 15 4 work tb_avalonMaster fast 0
+=1-3417ebaebb0d-583a0670-62017-3091
+R2
+n@_opt2
+R1
+vavalonMaster
+Z3 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z4 !s110 1480197740
+!i10b 1
+!s100 e2o`DUNNVHZbh1TYh:I=U2
+I3g9Wi8`Ih993>YFfHl>FK2
+Z5 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 avalonMaster_sv_unit
+S1
+R0
+w1480197715
+8source/avalonMaster.sv
+Fsource/avalonMaster.sv
+L0 1
+Z6 OL;L;10.3b;59
+r1
+!s85 0
+31
+!s108 1480197740.853279
+!s107 source/avalonMaster.sv|
+!s90 -sv|-work|source_work|source/avalonMaster.sv|
+!i113 0
+Z7 o-sv -work source_work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+navalon@master
+vavalonSlave
+R3
+!s110 1480196864
+!i10b 1
+!s100 S7i17E?A`]bc_56I4`Djf2
+Iz4cYBoSQFVa2R>JAoUh@Z0
+R5
+!s105 avalonSlave_sv_unit
+S1
+R0
+w1480196769
+8source/avalonSlave.sv
+Fsource/avalonSlave.sv
+L0 1
+R6
+r1
+!s85 0
+31
+!s108 1480196864.490289
+!s107 source/avalonSlave.sv|
+!s90 -sv|-work|source_work|source/avalonSlave.sv|
+!i113 0
+R7
+navalon@slave
+vflex_counter
+R3
+!s110 1480189158
+!i10b 1
+!s100 9ZgD4KlaFf9z[f=M9nPY40
+I[zTSNaeiC`ZcWLc[fITKj1
+R5
+!s105 flex_counter_sv_unit
+S1
+R0
+w1480189157
+8source/flex_counter.sv
+Fsource/flex_counter.sv
+L0 9
+R6
+r1
+!s85 0
+31
+!s108 1480189158.887163
+!s107 source/flex_counter.sv|
+!s90 -sv|-work|source_work|source/flex_counter.sv|
+!i113 0
+R7
+vtb_avalonMaster
+R3
+R4
+!i10b 1
+!s100 Z`;ZVH97[<=j6i]SJ@8Vo1
+I6:`ICj1:g0V2Z[IN8P<k]2
+R5
+!s105 tb_avalonMaster_sv_unit
+S1
+R0
+w1480197599
+8source/tb_avalonMaster.sv
+Fsource/tb_avalonMaster.sv
+L0 6
+R6
+r1
+!s85 0
+31
+!s108 1480197740.950172
+!s107 source/tb_avalonMaster.sv|
+!s90 -sv|-work|source_work|source/tb_avalonMaster.sv|
+!i113 0
+R7
+ntb_avalon@master
+vtb_avalonSlave
+R3
+!s110 1480194842
+!i10b 1
+!s100 52@EiN>>GQS]NY^ZaKlP91
+IIz@A@QLZ3g`Q=Rzd4h@I93
+R5
+!s105 tb_avalonSlave_sv_unit
+S1
+R0
+w1480194565
+8source/tb_avalonSlave.sv
+Fsource/tb_avalonSlave.sv
+L0 6
+R6
+r1
+!s85 0
+31
+!s108 1480194842.119669
+!s107 source/tb_avalonSlave.sv|
+!s90 -sv|-work|source_work|source/tb_avalonSlave.sv|
+!i113 0
+R7
+ntb_avalon@slave

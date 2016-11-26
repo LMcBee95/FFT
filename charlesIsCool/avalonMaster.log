@@ -1,0 +1,314 @@
+Synthesizing design: avalonMaster.sv
+dc_shell-t -x "source -echo do_mapping.tcl"
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+               Version K-2015.06-SP1 for linux64 - Jul 21, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# Step 1:  Read in the source file
+analyze -format sverilog -lib WORK {flex_counter.sv  avalonMaster.sv}
+Running PRESTO HDLC
+Compiling source file ./source/flex_counter.sv
+Compiling source file ./source/avalonMaster.sv
+Warning:  ./source/avalonMaster.sv:29: Using default enum base size of 32. (VER-533)
+Presto compilation completed successfully.
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/dw_foundation.sldb'
+elaborate avalonMaster -lib WORK
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 49 in file
+	'./source/avalonMaster.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            52            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 96 in file
+	'./source/avalonMaster.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           109            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine avalonMaster line 40 in file
+		'./source/avalonMaster.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred tri-state devices in process
+	in routine avalonMaster line 96 in file
+		'./source/avalonMaster.sv'.
+=========================================================
+|     Register Name     |       Type       | Width | MB |
+=========================================================
+|  master_address_tri   | Tri-State Buffer |  10   | N  |
+| master_write_data_tri | Tri-State Buffer |  16   | N  |
+|  sampled_address_tri  | Tri-State Buffer |   9   | N  |
+=========================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'avalonMaster'.
+Information: Building the design 'flex_counter' instantiated from design 'avalonMaster' with
+	the parameters "10". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS10 line 27 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rollover_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    count_out_reg    | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_counter' instantiated from design 'avalonMaster' with
+	the parameters "2". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS2 line 27 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rollover_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    count_out_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+uniquify
+# Step 2: Set design constraints
+# Uncomment below to set timing, area, power, etc. constraints
+# set_max_delay <delay> -from "<input>" -to "<output>"
+# set_max_area <area>
+# set_max_total_power <power> mW
+# Step 3: Compile the design
+compile -map_effort medium
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.1 |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.1 |     *     |
+============================================================================
+
+
+Information: There are 23 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'flex_counter_NUM_CNT_BITS2'
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS2'. (DDB-72)
+  Processing 'flex_counter_NUM_CNT_BITS10'
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS10'. (DDB-72)
+  Processing 'avalonMaster'
+Information: The register 'state_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[3]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'avalonMaster' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'avalonMaster_DW01_dec_0'
+  Processing 'avalonMaster_DW01_dec_1'
+  Processing 'flex_counter_NUM_CNT_BITS10_DW01_dec_0'
+  Processing 'flex_counter_NUM_CNT_BITS10_DW01_inc_0'
+  Mapping 'flex_counter_NUM_CNT_BITS10_DW_mult_uns_0'
+  Processing 'flex_counter_NUM_CNT_BITS10_DW01_cmp2_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'flex_counter_NUM_CNT_BITS2'
+  Mapping 'flex_counter_NUM_CNT_BITS2'
+  Structuring 'flex_counter_NUM_CNT_BITS10'
+  Mapping 'flex_counter_NUM_CNT_BITS10'
+  Structuring 'avalonMaster'
+  Mapping 'avalonMaster'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  106524.0      0.00       0.0       1.0                          
+    0:00:03  106524.0      0.00       0.0       1.0                          
+    0:00:03  106524.0      0.00       0.0       1.0                          
+    0:00:03  106524.0      0.00       0.0       1.0                          
+    0:00:03  106524.0      0.00       0.0       1.0                          
+    0:00:03  101484.0      0.00       0.0       0.3                          
+    0:00:03  101484.0      0.00       0.0       0.3                          
+    0:00:03  101484.0      0.00       0.0       0.3                          
+    0:00:03  101484.0      0.00       0.0       0.3                          
+    0:00:03  101484.0      0.00       0.0       0.3                          
+    0:00:03  101484.0      0.00       0.0       0.1                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+    0:00:03  101484.0      0.00       0.0       0.0                          
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+# Step 4: Output reports
+report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/avalonMaster.rep
+report_area >> reports/avalonMaster.rep
+report_power -hier >> reports/avalonMaster.rep
+# Step 5: Output final VHDL and Verilog files
+write_file -format verilog -hierarchy -output "mapped/avalonMaster.v"
+Writing verilog file '/home/ecegrid/a/mg103/ece337/finalProject/FFT/charlesIsCool/mapped/avalonMaster.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+echo "\nScript Done\n"
+
+Script Done
+
+echo "\nChecking Design\n"
+
+Checking Design
+
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06-SP1
+Date:        Sat Nov 26 17:06:44 2016
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                              14
+    Connected to power or ground (LINT-32)                         12
+    Nets connected to multiple pins on same cell (LINT-33)          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'avalonMaster', a pin on submodule 'samNum' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[9]' is connected to logic 1. 
+Warning: In design 'avalonMaster', a pin on submodule 'samNum' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[8]' is connected to logic 0. 
+Warning: In design 'avalonMaster', a pin on submodule 'samNum' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[7]' is connected to logic 0. 
+Warning: In design 'avalonMaster', a pin on submodule 'samNum' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[6]' is connected to logic 0. 
+Warning: In design 'avalonMaster', a pin on submodule 'samNum' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[5]' is connected to logic 0. 
+Warning: In design 'avalonMaster', a pin on submodule 'samNum' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[4]' is connected to logic 0. 
+Warning: In design 'avalonMaster', a pin on submodule 'samNum' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 0. 
+Warning: In design 'avalonMaster', a pin on submodule 'samNum' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'avalonMaster', a pin on submodule 'samNum' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'avalonMaster', a pin on submodule 'samNum' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'avalonMaster', a pin on submodule 'holdWrite' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 1. 
+Warning: In design 'avalonMaster', a pin on submodule 'holdWrite' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 1. 
+Warning: In design 'avalonMaster', the same net is connected to more than one pin on submodule 'samNum'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[8]', 'rollover_val[7]'', 'rollover_val[6]', 'rollover_val[5]', 'rollover_val[4]', 'rollover_val[3]', 'rollover_val[2]', 'rollover_val[1]', 'rollover_val[0]'.
+Warning: In design 'avalonMaster', the same net is connected to more than one pin on submodule 'holdWrite'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'rollover_val[1]', 'rollover_val[0]''.
+Warning: In design 'avalonMaster', output port 'master_read' is connected directly to 'logic 0'. (LINT-52)
+quit
+
+Thank you...
+Done
+
+

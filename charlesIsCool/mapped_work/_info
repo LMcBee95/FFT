@@ -1,0 +1,243 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegrid/a/mg103/ece337/finalProject/FFT/charlesIsCool
+T_opt
+!s110 1480196786
+V[n<_QgiC18Ee@3bIHcIUf1
+04 14 4 work tb_avalonSlave fast 0
+=1-3417ebaebb0d-583a02b2-3c0eb-2e7c
+Z1 o-quiet -auto_acc_if_foreign -work mapped_work -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim +acc
+n@_opt
+Z2 OL;O;10.3b;59
+R0
+T_opt1
+!s110 1480198011
+VY`4?fBFlWKG1Q7e]K1AOg3
+04 15 4 work tb_avalonMaster fast 0
+=1-3417ebaebb0d-583a077b-1375e-3245
+R1
+n@_opt1
+R2
+vavalonMaster
+Z3 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z4 !s110 1480198007
+!i10b 1
+!s100 nQOo>P[1RNZX;1Th8ffcU2
+Ia7VLYCcJ>cc_kk2k8QeG^0
+Z5 V`JN@9S9cnhjKRR_L]QIcM3
+Z6 !s105 avalonMaster_v_unit
+S1
+R0
+Z7 w1480198004
+Z8 8mapped/avalonMaster.v
+Z9 Fmapped/avalonMaster.v
+L0 232
+Z10 OL;L;10.3b;59
+r1
+!s85 0
+31
+Z11 !s108 1480198007.355029
+Z12 !s107 mapped/avalonMaster.v|
+Z13 !s90 -sv|-work|mapped_work|mapped/avalonMaster.v|
+!i113 0
+Z14 o-sv -work mapped_work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+navalon@master
+vavalonSlave
+R3
+Z15 !s110 1480196782
+!i10b 1
+!s100 RQ4_la49_5c=P`R=5iSJZ2
+I9bP5lDHZjO60hfRU@fO8n1
+R5
+Z16 !s105 avalonSlave_v_unit
+S1
+R0
+Z17 w1480196779
+Z18 8mapped/avalonSlave.v
+Z19 Fmapped/avalonSlave.v
+L0 178
+R10
+r1
+!s85 0
+31
+Z20 !s108 1480196782.655980
+Z21 !s107 mapped/avalonSlave.v|
+Z22 !s90 -sv|-work|mapped_work|mapped/avalonSlave.v|
+!i113 0
+R14
+navalon@slave
+vflex_counter_NUM_CNT_BITS10
+R3
+R4
+!i10b 1
+!s100 :go>44O[X>]B5T_ENL03C0
+I:_?fZS[zmQK35Y=Xdj<o72
+R5
+R6
+S1
+R0
+R7
+R8
+R9
+L0 27
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+nflex_counter_@n@u@m_@c@n@t_@b@i@t@s10
+vflex_counter_NUM_CNT_BITS10_DW01_inc_0
+R3
+R4
+!i10b 1
+!s100 fGdhBo>jPMEND6Y;Q;o1T0
+Ie7HDcF;GDB5Q^DY?LO;9A0
+R5
+R6
+S1
+R0
+R7
+R8
+R9
+L0 8
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+nflex_counter_@n@u@m_@c@n@t_@b@i@t@s10_@d@w01_inc_0
+vflex_counter_NUM_CNT_BITS2
+R3
+R4
+!i10b 1
+!s100 LKSo^IW6SP;KJ<on?EPVV1
+IobFBNB]ah;Y]?lB=gU`[`3
+R5
+R6
+S1
+R0
+R7
+R8
+R9
+L0 194
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+nflex_counter_@n@u@m_@c@n@t_@b@i@t@s2
+vflex_counter_NUM_CNT_BITS9
+R3
+R15
+!i10b 1
+!s100 YIn6V3]ce`FMbEZBoQPnY0
+Izjclil[Z[^>_4IR>el]i_1
+R5
+R16
+S1
+R0
+R17
+R18
+R19
+L0 26
+R10
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 0
+R14
+nflex_counter_@n@u@m_@c@n@t_@b@i@t@s9
+vflex_counter_NUM_CNT_BITS9_DW01_inc_0
+R3
+R15
+!i10b 1
+!s100 g4NAU_O?2MYbd2W6N[B>O2
+IAkGRjL4DeH9KL>>_Di=zR3
+R5
+R16
+S1
+R0
+R17
+R18
+R19
+L0 8
+R10
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 0
+R14
+nflex_counter_@n@u@m_@c@n@t_@b@i@t@s9_@d@w01_inc_0
+vtb_avalonMaster
+R3
+R4
+!i10b 1
+!s100 Z`;ZVH97[<=j6i]SJ@8Vo1
+I3l4]LD]TKBoKbD8l1`5Gl1
+R5
+!s105 tb_avalonMaster_sv_unit
+S1
+R0
+w1480197599
+8source/tb_avalonMaster.sv
+Fsource/tb_avalonMaster.sv
+L0 6
+R10
+r1
+!s85 0
+31
+!s108 1480198007.495106
+!s107 source/tb_avalonMaster.sv|
+!s90 -sv|-work|mapped_work|source/tb_avalonMaster.sv|
+!i113 0
+R14
+ntb_avalon@master
+vtb_avalonSlave
+R3
+!s110 1480194641
+!i10b 1
+!s100 52@EiN>>GQS]NY^ZaKlP91
+IULEz_mCfobF@j0Ho3B[Vj1
+R5
+!s105 tb_avalonSlave_sv_unit
+S1
+R0
+w1480194565
+8source/tb_avalonSlave.sv
+Fsource/tb_avalonSlave.sv
+L0 6
+R10
+r1
+!s85 0
+31
+!s108 1480194641.280540
+!s107 source/tb_avalonSlave.sv|
+!s90 -sv|-work|mapped_work|source/tb_avalonSlave.sv|
+!i113 0
+R14
+ntb_avalon@slave
