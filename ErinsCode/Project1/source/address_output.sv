@@ -1,0 +1,66 @@
+// $Id: $
+// File name:   address_output.sv
+// Created:     11/24/2016
+// Author:      Erin Hill
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: Address output 
+module address_output
+(
+	input wire clk,
+	input wire nrst,
+	input reg [1:0] input_mode, //addr_mode
+	input reg [3:0] samples_in_count,
+	input reg [3:0] samples_out_count,
+	input reg [4:0] iteration_count,
+	input reg [3:0] stage_count,
+	
+	output reg [9:0] a_real,
+	output reg [9:0] a_imag,
+	output reg [9:0] b_real,
+	output reg [9:0] b_imag
+);
+reg [9:0] next_a_real;
+reg [9:0] next_a_imag;
+reg [9:0] next_b_real;
+reg [9:0] next_b_imag;
+reg [3:0] samples;
+
+always_ff @ (posedge clk, negedge nrst) begin
+	if(nrst == 1'b0) begin
+		a_real <= 10'b0;
+		a_imag <= 10'b0;
+		b_real <= 10'b0;
+		b_imag <= 10'b0;
+	end
+	else begin
+		a_real <= next_a_real;
+		a_imag <= next_a_imag;
+		b_real <= next_b_real;
+		b_imag <= next_b_imag;
+	end
+end
+
+always_comb begin
+	next_a_real = a_real;
+	next_a_imag = a_imag;
+	next_b_real = b_real;
+	next_b_imag = b_imag;
+	samples = 5'b0;
+
+	if(input_mode == 2'b01) begin //load input FFT
+		samples = samples_in_count;
+	end
+	else if (input_mode == 2'b11) begin //load output FFT
+		samples = samples_out_count;
+	end
+
+	next_a_real = samples + 8*iteration_count;
+	next_a_imag = next_a_real + 256;
+
+	next_b_real = next_a_real + 256/2**(stage_count + 1);
+	next_b_imag = next_b_real + 256;
+end
+
+
+endmodule
