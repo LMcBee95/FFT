@@ -7,20 +7,20 @@ module tb_ptsWrapper();
 	localparam CLK_PERIOD	= 10ns;
 
 	// Test bench dut port signals
-	wire tb_clk;
-	wire tb_n_reset;
-	wire tb_out_strobe;
-	wire tb_load_strobe;
-	wire [15:0] tb_in1,tb_in2,tb_in3,tb_in4,tb_in5,tb_in6,tb_in7,tb_in8,tb_in9,tb_in10,tb_in11,tb_in12,tb_in13,tb_in14,tb_in15,tb_in16;
-	wire [15:0] tb_in17,tb_in18,tb_in19,tb_in20,tb_in21,tb_in22,tb_in23,tb_in24,tb_in25,tb_in26,tb_in27,tb_in28,tb_in29,tb_in30,tb_in31,tb_in32;
+	reg tb_clk;
+	reg tb_n_reset;
+	reg tb_out_strobe;
+	reg tb_load_enable;
+	reg [15:0] tb_in1,tb_in2,tb_in3,tb_in4,tb_in5,tb_in6,tb_in7,tb_in8,tb_in9,tb_in10,tb_in11,tb_in12,tb_in13,tb_in14,tb_in15,tb_in16;
+	reg [15:0] tb_in17,tb_in18,tb_in19,tb_in20,tb_in21,tb_in22,tb_in23,tb_in24,tb_in25,tb_in26,tb_in27,tb_in28,tb_in29,tb_in30,tb_in31,tb_in32;
 	reg [15:0] tb_serial_out;
 
 	task load_register;
-		input logic load_strobe;
+		input logic load_enable;
 		input logic [15:0] in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11,in12,in13,in14,in15,in16;
 		input logic [15:0] in17,in18,in19,in20,in21,in22,in23,in24,in25,in26,in27,in28,in29,in30,in31,in32;
 	begin
-		tb_load_strobe = load_strobe;
+		tb_load_enable = load_enable;
 		
 		tb_in1 = in1;
 		tb_in2 = in2;
@@ -62,6 +62,26 @@ module tb_ptsWrapper();
 	begin
 		tb_out_strobe = out_strobe;
 	end
+	endtask
+
+	task reset_dut;
+	begin
+		// Activate the design's reset (does not need to be synchronize with clock)
+		tb_n_reset = 1'b0;
+		
+		// Wait for a couple clock cycles
+		@(posedge tb_clk);
+		@(posedge tb_clk);
+		
+		// Release the reset
+		@(negedge tb_clk);
+		tb_n_reset = 1;
+		
+		// Wait for a while before activating the design
+		@(posedge tb_clk);
+		@(posedge tb_clk);
+	end
+	endtask
 	
 	// Clock gen block
 	always
@@ -71,54 +91,58 @@ module tb_ptsWrapper();
 		tb_clk = 1'b1;
 		#(CLK_PERIOD / 2.0);
 	end
-	
+		
+
 	// DUT portmap
-	PtSWrapper DUT(
+	ptsWrapper DUT(
 		.clk(tb_clk), //400 MHz
 		.n_rst(tb_n_reset), //asynch, active-low
-		.out_strobe(tb_out_strobe);
-		.load_strobe(tb_load_strobe);
+		.out_strobe(tb_out_strobe),
+		.load_enable(tb_load_enable),
 		
-		.in1(tb_in1);
-		.in2(tb_in2);
-		.in3(tb_in3);
-		.in4(tb_in4);
-		.in5(tb_in5);
-		.in6(tb_in6);
-		.in7(tb_in7);
-		.in8(tb_in8);
-		.in9(tb_in9);
-		.in10(tb_in10);
-		.in11(tb_in11);
-		.in12(tb_in12);
-		.in13(tb_in13);
-		.in14(tb_in14);
-		.in15(tb_in15);
-		.in16(tb_in16);
-		.in17(tb_in17);
-		.in18(tb_in18);
-		.in19(tb_in19);
-		.in20(tb_in20);
-		.in21(tb_in21);
-		.in22(tb_in22);
-		.in23(tb_in23);
-		.in24(tb_in24);
-		.in25(tb_in25);
-		.in26(tb_in26);
-		.in27(tb_in27);
-		.in28(tb_in28);
-		.in29(tb_in29);
-		.in30(tb_in30);
-		.in31(tb_in31);
-		.in32(tb_in32);
+		.in1(tb_in1),
+		.in2(tb_in2),
+		.in3(tb_in3),
+		.in4(tb_in4),
+		.in5(tb_in5),
+		.in6(tb_in6),
+		.in7(tb_in7),
+		.in8(tb_in8),
+		.in9(tb_in9),
+		.in10(tb_in10),
+		.in11(tb_in11),
+		.in12(tb_in12),
+		.in13(tb_in13),
+		.in14(tb_in14),
+		.in15(tb_in15),
+		.in16(tb_in16),
+		.in17(tb_in17),
+		.in18(tb_in18),
+		.in19(tb_in19),
+		.in20(tb_in20),
+		.in21(tb_in21),
+		.in22(tb_in22),
+		.in23(tb_in23),
+		.in24(tb_in24),
+		.in25(tb_in25),
+		.in26(tb_in26),
+		.in27(tb_in27),
+		.in28(tb_in28),
+		.in29(tb_in29),
+		.in30(tb_in30),
+		.in31(tb_in31),
+		.in32(tb_in32),
 		
-		.serial_out(tb_serial_out);
+		.serial_out(tb_serial_out)
 	);	
 	
 	// Test bench process
 	initial
 	begin
-		#Test 1: Loading values
+
+		reset_dut;
+
+		//#Test 1: Loading values
 		@(negedge tb_clk);
 		out_register(0);
 		
