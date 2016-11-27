@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version K-2015.06-SP1 for linux64 -- Jul 21, 2015
-#@ # Date:   Sat Nov 26 17:06:39 2016
-#@ # Run by: mg103@ee215lnx18.ecn.purdue.edu
+#@ # Date:   Sun Nov 27 00:41:21 2016
+#@ # Run by: mg103@ecegrid-thin4.ecn.purdue.edu
 #@ 
 
 source /package/eda/synopsys/syn-K-2015.06-SP1/admin/setup/.synopsys_dc.setup
@@ -3841,8 +3841,8 @@ source -echo do_mapping.tcl
 #@ # -- Starting source do_mapping.tcl
 
 #@ # Step 1:  Read in the source file
-#@ analyze -format sverilog -lib WORK {flex_counter.sv  avalonMaster.sv}
-#@ elaborate avalonMaster -lib WORK
+#@ analyze -format sverilog -lib WORK {flex_counter.sv  avSlave.sv}
+#@ elaborate avSlave -lib WORK
 #@ uniquify
 #@ # Step 2: Set design constraints
 #@ # Uncomment below to set timing, area, power, etc. constraints
@@ -3855,12 +3855,12 @@ source -echo do_mapping.tcl
 #@ compile -map_effort medium
 #@ 
 #@ # Step 4: Output reports
-#@ report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/avalonMaster.rep
-#@ report_area >> reports/avalonMaster.rep
-#@ report_power -hier >> reports/avalonMaster.rep
+#@ report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/avSlave.rep
+#@ report_area >> reports/avSlave.rep
+#@ report_power -hier >> reports/avSlave.rep
 #@ 
 #@ # Step 5: Output final VHDL and Verilog files
-#@ write_file -format verilog -hierarchy -output "mapped/avalonMaster.v"
+#@ write_file -format verilog -hierarchy -output "mapped/avSlave.v"
 #@ echo "\nScript Done\n"
 #@ echo "\nChecking Design\n"
 #@ check_design

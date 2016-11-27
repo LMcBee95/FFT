@@ -3,7 +3,7 @@
 
 `timescale 1ns / 100ps
 
-module tb_avalonSlave
+module tb_avSlave
 ();
 localparam	CLK_PERIOD	= 10;
 
@@ -21,7 +21,7 @@ end
 wire tb_n_rst;
 wire tb_slave_read;
 wire [8:0]tb_slave_address;
-wire [15:0]tb_slave_writedata;
+wire [31:0]tb_slave_writedata;
 reg [15:0] tb_fft_init_data;
 reg [8:0] tb_wAddress;
 reg tb_fft_start;
@@ -34,10 +34,10 @@ reg tb_sWriteEn;
 reg tb_test_slave_read;
 reg tb_test_slave_write;
 reg [8:0]tb_test_slave_address;
-reg [15:0]tb_test_slave_writedata;
+reg [31:0]tb_test_slave_writedata;
 reg tb_test_slave_chipselect;
 // DUT port map
-	avalonSlave DUT(
+	avSlave DUT(
 			.clk(tb_clk),
 			.n_rst(tb_n_rst),
 			.slave_read(tb_slave_read),
@@ -68,7 +68,7 @@ reg tb_test_slave_chipselect;
 	tb_test_case = 0;
 	tb_test_slave_read = 1'b0;
 	tb_test_slave_write = 1'b0;
-	tb_test_slave_writedata = 16'h0000;
+	tb_test_slave_writedata = 17'h0000;
 	tb_test_slave_address = 9'h00;
 	tb_test_slave_chipselect = 1'b0;
 
@@ -80,22 +80,27 @@ reg tb_test_slave_chipselect;
 #5;
 	tb_test_slave_write = 1'b1;
 	tb_test_slave_address =tb_test_case;
-	tb_test_slave_writedata = 16'hffff;
+	tb_test_slave_writedata = 17'h1ffff;
 	tb_test_slave_chipselect = 1'b1;
 #10
 	for(tb_test_case =0; tb_test_case < 256;tb_test_case = tb_test_case +1)
 	begin
 	tb_test_slave_write = 1'b1;
 	tb_test_slave_address =tb_test_case;
-	tb_test_slave_writedata = 16'hf0f0;
+	tb_test_slave_writedata = tb_test_case;
 	tb_test_slave_chipselect = 1'b1;
 #30;
 	tb_test_slave_write = 1'b0;
-	tb_test_slave_address =9'hxx;
-	tb_test_slave_writedata = 16'hf0f0;
+	tb_test_slave_address =9'h00;
+	tb_test_slave_writedata = 17'h0f0f0;
 	tb_test_slave_chipselect = 1'b0;
-#10;
+#30;
 	end
+
+	tb_test_slave_write = 1'b1;
+	tb_test_slave_address =tb_test_case;
+	tb_test_slave_writedata = 17'h10000;
+	tb_test_slave_chipselect = 1'b1;
 
 #10;
 	end
