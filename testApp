@@ -56,17 +56,45 @@ int main( int argc, char *argv[])
 	{
 		start(hPCIe, argv[2]);
 	}
+	else if(strcmp("-t",input)==0)
+	{
+		test(hPCIe,argv[2]);
+	}
 	else if(strcmp("-h",input)==0)
 	{
-		printf("Use **./app -d <textname>** to start demo.\n");	
+		printf("Use **./testApp -d/-t <textname>** to start demo.\n");	
 	}
 	else {
-		printf("Wrong command. Use **./app -h** for help.\n");
+		printf("Wrong command you idiot. Use **./app -h** for help.\n");
 	}
 
 	return 0;
 }
+BOOL test(PCIE_HANDLE handle, int toSend){
 
+	DWORD addr =0x00000000;
+	DWORD start = 0x1ff;
+	DWORD stop = 0x100;
+	BOOL bPass = PCIE_Write32(handle,pcie_bars[0],addr,start);
+	if(!bPass){
+		printf("COMRADE STALIN IS DISSAPOINTED\n");
+		return false;
+	}
+	addr++;
+	BOOL bPass = PCIE_Write32(handle,pcie_bars[0],addr,toSend);
+	if(!bPass){
+		printf("COMRADE STALIN IS DISSAPOINTED\n");
+		return false;
+	}
+	addr++;
+	BOOL bPass = PCIE_Write32(handle,pcie_bars[0],addr,stop);
+	if(!bPass){
+		printf("COMRADE STALIN IS DISSAPOINTED\n");
+		return false;
+	}
+	printf("GLORIOUS, YOU HAVE WRITTEN TO THE PROLETARIAT"\n");	
+	return true;
+}
 BOOL writeSamples(PCIE_HANDLE hPCIe,  char *filename, BITMAPINFOHEADER *info)
 {
 	FILE * pFile;
