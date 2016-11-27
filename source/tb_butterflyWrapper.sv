@@ -98,41 +98,6 @@ module tb_butterflyWrapper();
 	reg [15:0] tb_output_16_real;
 	reg [15:0] tb_output_16_imaginary;
 	
-	reg [15:0] tb_output_17_real;
-	reg [15:0] tb_output_17_imaginary;
-	reg [15:0] tb_output_18_real;
-	reg [15:0] tb_output_18_imaginary;
-	reg [15:0] tb_output_19_real;
-	reg [15:0] tb_output_19_imaginary;
-	reg [15:0] tb_output_20_real;
-	reg [15:0] tb_output_20_imaginary;
-	reg [15:0] tb_output_21_real;
-	reg [15:0] tb_output_21_imaginary;
-	reg [15:0] tb_output_22_real;
-	reg [15:0] tb_output_22_imaginary;
-	reg [15:0] tb_output_23_real;
-	reg [15:0] tb_output_23_imaginary;
-	reg [15:0] tb_output_24_real;
-	reg [15:0] tb_output_24_imaginary;
-	
-	reg [15:0] tb_output_25_real;
-	reg [15:0] tb_output_25_imaginary;
-	reg [15:0] tb_output_26_real;
-	reg [15:0] tb_output_26_imaginary;
-	reg [15:0] tb_output_27_real;
-	reg [15:0] tb_output_27_imaginary;
-	reg [15:0] tb_output_28_real;
-	reg [15:0] tb_output_28_imaginary;
-	reg [15:0] tb_output_29_real;
-	reg [15:0] tb_output_29_imaginary;
-	reg [15:0] tb_output_30_real;
-	reg [15:0] tb_output_30_imaginary;
-	reg [15:0] tb_output_31_real;
-	reg [15:0] tb_output_31_imaginary;
-	reg [15:0] tb_output_32_real;
-	reg [15:0] tb_output_32_imaginary
-
-
 	task load_butterfly1;
 		input logic [15:0] real_1;
 		input logic [15:0] imag_1;
