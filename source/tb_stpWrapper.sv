@@ -44,68 +44,24 @@ module tb_stpWrapper();
 	initial
 	begin
 		#Test 1: Loading values 0-47
+		@(negedge tb_clk);
 		load_register(0,16'h0);
 		
-		load_register(1,16'h0);
-		load_register(1,16'h1);
-		load_register(1,16'h2);
-		load_register(1,16'h3);
-		load_register(1,16'h4);
-		load_register(1,16'h5);
-		load_register(1,16'h6);
-		load_register(1,16'h7);
-		load_register(1,16'h8);
-		load_register(1,16'h9);
-		load_register(1,16'hA);
-		load_register(1,16'hB);
-		load_register(1,16'hC);
-		load_register(1,16'hD);
-		load_register(1,16'hE);
-		load_register(1,16'hF);
-		load_register(1,16'h10);
-		load_register(1,16'h11);
-		load_register(1,16'h12);
-		load_register(1,16'h13);
-		load_register(1,16'h14);
-		load_register(1,16'h15);
-		load_register(1,16'h16);
-		load_register(1,16'h17);
-		load_register(1,16'h18);
-		load_register(1,16'h19);
-		load_register(1,16'h1A);
-		load_register(1,16'h1B);
-		load_register(1,16'h1C);
-		load_register(1,16'h1D);
-		load_register(1,16'h1E);
-		load_register(1,16'h1F);
-		load_register(1,16'h20);
-		load_register(1,16'h21);
-		load_register(1,16'h22);
-		load_register(1,16'h23);
-		load_register(1,16'h24);
-		load_register(1,16'h25);
-		load_register(1,16'h26);
-		load_register(1,16'h27);
-		load_register(1,16'h28);
-		load_register(1,16'h29);
-		load_register(1,16'h2A);
-		load_register(1,16'h2B);
-		load_register(1,16'h2C);
-		load_register(1,16'h2D);
-		load_register(1,16'h2E);
-		load_register(1,16'h2F);
+		for(int i = 0; i < 48; i++)
+		begin
+			@(negedge tb_clk);
+			load_register(1,i)
+		end
 		
+		@(negedge tb_clk);
 		load_register(0,16'h0);
 		
 		#(1);
 		$info("Output: ",);
 		for(int i = 0; i < 48; i++)
 		begin
+			@(negedge tb_clk);
 			$info("%h", tb_data_par[i]);
 		end
-		
-
-
 	end
-
 endmodule

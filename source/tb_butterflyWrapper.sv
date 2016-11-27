@@ -247,118 +247,84 @@ module tb_butterflyWrapper();
 		.output_2_real(tb_output_2_real),
 		.output_2_imaginary(tb_output_2_imaginary),
 		
-	.input_3_real(tb_input_3_real),
-	.input_3_imaginary(tb_input_3_imaginary),
-	.input_4_real(tb_input_4_real),
-	.input_4_imaginary(tb_input_4_imaginary),
-	.twiddle2_real(tb_twiddle2_real), 
-	.twiddle2_imaginary(tb_twiddle2_imaginary),
-	
-	.input_5_real(tb_input_5_real),
-	.input_5_imaginary(tb_input_5_imaginary),
-	.input_6_real(tb_input_6_real),
-	.input_6_imaginary(tb_input_6_imaginary),
-	.twiddle3_real(tb_twiddle3_real), 
-	.twiddle3_imaginary(tb_twiddle3_imaginary),
+		.input_3_real(tb_input_3_real),
+		.input_3_imaginary(tb_input_3_imaginary),
+		.input_4_real(tb_input_4_real),
+		.input_4_imaginary(tb_input_4_imaginary),
+		.twiddle2_real(tb_twiddle2_real), 
+		.twiddle2_imaginary(tb_twiddle2_imaginary),
+		
+		.input_5_real(tb_input_5_real),
+		.input_5_imaginary(tb_input_5_imaginary),
+		.input_6_real(tb_input_6_real),
+		.input_6_imaginary(tb_input_6_imaginary),
+		.twiddle3_real(tb_twiddle3_real), 
+		.twiddle3_imaginary(tb_twiddle3_imaginary),
 
-	.input_7_real(tb_input_7_real),
-	.input_7_imaginary(tb_input_7_imaginary),
-	.input_8_real(tb_input_8_real),
-	.input_8_imaginary(tb_input_8_imaginary),
-	.twiddle4_real(tb_twiddle4_real), 
-	.twiddle4_imaginary(tb_twiddle4_imaginary),
-	
-	.input_9_real(tb_input_9_real),
-	.input_9_imaginary(tb_input_9_imaginary),
-	.input_10_real(tb_input_10_real),
-	.input_10_imaginary(tb_input_10_imaginary),
-	.twiddle5_real(tb_twiddle5_real), 
-	.twiddle5_imaginary(tb_twiddle5_imaginary),
-	
-	.input_11_real(tb_input_11_real),
-	.input_11_imaginary(tb_input_11_imaginary),
-	.input_12_real(tb_input_12_real),
-	.input_12_imaginary(tb_input_12_imaginary),
-	.twiddle6_real(tb_twiddle6_real),
-	.twiddle6_imaginary(tb_twiddle6_imaginary),
-	
-	.input_13_real(tb_input_13_real),
-	.input_13_imaginary(tb_input_13_imaginary),
-	.input_14_real(tb_input_14_real),
-	.input_14_imaginary(tb_input_14_imaginary),
-	.twiddle7_real(tb_twiddle7_real), 
-	.twiddle7_imaginary(tb_twiddle7_imaginary),
-	
-	.input_15_real(tb_input_15_real),
-	.input_15_imaginary(tb_input_15_imaginary),
-	.input_16_real(tb_input_16_real),
-	.input_16_imaginary(tb_input_16_imaginary),
-	.twiddle8_real(tb_twiddle8_real), 
-	.twiddle8_imaginary(tb_twiddle8_imaginary),
-	
-	.output_3_real(tb_output_3_real),
-	.output_3_imaginary(tb_output_3_imaginary),
-	.output_4_real(tb_output_4_real),
-	.output_4_imaginary(tb_output_4_imaginary),
-	.output_5_real(tb_output_5_real),
-	.output_5_imaginary(tb_output_5_imaginary),
-	.output_6_real(tb_output_6_real),
-	.output_6_imaginary(tb_output_6_imaginary),
-	.output_7_real(tb_output_7_real),
-	.output_7_imaginary(tb_output_7_imaginary),
-	.output_8_real(tb_output_8_real),
-	.output_8_imaginary(tb_output_8_imaginary),
-	
-	.output_9_real(tb_output_9_real),
-	.output_9_imaginary(tb_output_9_imaginary),
-	.output_10_real(tb_output_10_real),
-	.output_10_imaginary(tb_output_10_imaginary),
-	.output_11_real(tb_output_11_real),
-	.output_11_imaginary(tb_output_11_imaginary),
-	.output_12_real(tb_output_12_real),
-	.output_12_imaginary(tb_output_12_imaginary),
-	.output_13_real(tb_output_13_real),
-	.output_13_imaginary(tb_output_13_imaginary),
-	.output_14_real(tb_output_14_real),
-	.output_14_imaginary(tb_output_14_imaginary),
-	.output_15_real(tb_output_15_real),
-	.output_15_imaginary(tb_output_15_imaginary),
-	.output_16_real(tb_output_16_real),
-	.output_16_imaginary(tb_output_61_imaginary),
-	
-	.output_17_real(tb_output_17_real),
-	.output_17_imaginary(tb_output_17_imaginary),
-	.output_18_real(tb_output_18_real),
-	.output_18_imaginary(tb_output_18_imaginary),
-	.output_19_real(tb_output_19_real),
-	.output_19_imaginary(tb_output_19_imaginary),
-	.output_20_real(tb_output_20_real),
-	.output_20_imaginary(tb_output_20_imaginary),
-	.output_21_real(tb_output_21_real),
-	.output_21_imaginary(tb_output_21_imaginary),
-	.output_22_real(tb_output_22_real),
-	.output_22_imaginary(tb_output_22_imaginary),
-	.output_23_real(tb_output_23_real),
-	.output_23_imaginary(tb_output_23_imaginary),
-	.output_24_real(tb_output_24_real),
-	.output_24_imaginary(tb_output_24_imaginary),
-	
-	.output_25_real(tb_output_25_real),
-	.output_25_imaginary(tb_output_25_imaginary),
-	.output_26_real(tb_output_26_real),
-	.output_26_imaginary(tb_output_26_imaginary),
-	.output_27_real(tb_output_27_real),
-	.output_27_imaginary(tb_output_27_imaginary),
-	.output_28_real(tb_output_28_real),
-	.output_28_imaginary(tb_output_28_imaginary),
-	.output_29_real(tb_output_29_real),
-	.output_29_imaginary(tb_output_29_imaginary),
-	.output_30_real(tb_output_30_real),
-	.output_30_imaginary(tb_output_30_imaginary),
-	.output_31_real(tb_output_31_real),
-	.output_31_imaginary(tb_output_31_imaginary),
-	.output_32_real(tb_output_32_real),
-	.output_32_imaginary(tb_output_32_imaginary)
+		.input_7_real(tb_input_7_real),
+		.input_7_imaginary(tb_input_7_imaginary),
+		.input_8_real(tb_input_8_real),
+		.input_8_imaginary(tb_input_8_imaginary),
+		.twiddle4_real(tb_twiddle4_real), 
+		.twiddle4_imaginary(tb_twiddle4_imaginary),
+		
+		.input_9_real(tb_input_9_real),
+		.input_9_imaginary(tb_input_9_imaginary),
+		.input_10_real(tb_input_10_real),
+		.input_10_imaginary(tb_input_10_imaginary),
+		.twiddle5_real(tb_twiddle5_real), 
+		.twiddle5_imaginary(tb_twiddle5_imaginary),
+		
+		.input_11_real(tb_input_11_real),
+		.input_11_imaginary(tb_input_11_imaginary),
+		.input_12_real(tb_input_12_real),
+		.input_12_imaginary(tb_input_12_imaginary),
+		.twiddle6_real(tb_twiddle6_real),
+		.twiddle6_imaginary(tb_twiddle6_imaginary),
+		
+		.input_13_real(tb_input_13_real),
+		.input_13_imaginary(tb_input_13_imaginary),
+		.input_14_real(tb_input_14_real),
+		.input_14_imaginary(tb_input_14_imaginary),
+		.twiddle7_real(tb_twiddle7_real), 
+		.twiddle7_imaginary(tb_twiddle7_imaginary),
+		
+		.input_15_real(tb_input_15_real),
+		.input_15_imaginary(tb_input_15_imaginary),
+		.input_16_real(tb_input_16_real),
+		.input_16_imaginary(tb_input_16_imaginary),
+		.twiddle8_real(tb_twiddle8_real), 
+		.twiddle8_imaginary(tb_twiddle8_imaginary),
+		
+		.output_3_real(tb_output_3_real),
+		.output_3_imaginary(tb_output_3_imaginary),
+		.output_4_real(tb_output_4_real),
+		.output_4_imaginary(tb_output_4_imaginary),
+		.output_5_real(tb_output_5_real),
+		.output_5_imaginary(tb_output_5_imaginary),
+		.output_6_real(tb_output_6_real),
+		.output_6_imaginary(tb_output_6_imaginary),
+		.output_7_real(tb_output_7_real),
+		.output_7_imaginary(tb_output_7_imaginary),
+		.output_8_real(tb_output_8_real),
+		.output_8_imaginary(tb_output_8_imaginary),
+		
+		.output_9_real(tb_output_9_real),
+		.output_9_imaginary(tb_output_9_imaginary),
+		.output_10_real(tb_output_10_real),
+		.output_10_imaginary(tb_output_10_imaginary),
+		.output_11_real(tb_output_11_real),
+		.output_11_imaginary(tb_output_11_imaginary),
+		.output_12_real(tb_output_12_real),
+		.output_12_imaginary(tb_output_12_imaginary),
+		.output_13_real(tb_output_13_real),
+		.output_13_imaginary(tb_output_13_imaginary),
+		.output_14_real(tb_output_14_real),
+		.output_14_imaginary(tb_output_14_imaginary),
+		.output_15_real(tb_output_15_real),
+		.output_15_imaginary(tb_output_15_imaginary),
+		.output_16_real(tb_output_16_real),
+		.output_16_imaginary(tb_output_61_imaginary)
 		
 	);	
 	// Test bench process
@@ -384,6 +350,27 @@ module tb_butterflyWrapper();
 		$info("Real 13 = %d | Imag 13 = %d | Real 14 = %d | Imag 14 = %d", tb_output_13_real, tb_output_13_imaginary, tb_output_14_real, tb_output_14_imaginary);
 		$info("Real 15 = %d | Imag 15 = %d | Real 16 = %d | Imag 16 = %d", tb_output_15_real, tb_output_15_imaginary, tb_output_16_real, tb_output_16_imaginary);
 
-	end
+		@(negedge tb_clk);
+		@(negedge tb_clk);
+		load_butterfly1(1, 2, 3, 4, 5, 6);
+		load_butterfly2(7, 8, 9, 10, 11, 12);
+		load_butterfly3(13, 14, 15, 16, 17, 18);
+		load_butterfly4(19, 20, 21, 22, 23, 24);
+		load_butterfly5(25, 26, 27, 28, 29, 30);
+		load_butterfly6(31, 32, 33, 34, 35, 36);
+		load_butterfly7(37, 38, 39, 40, 41, 42);
+		load_butterfly8(43, 44, 45, 46, 47, 48);
 
+		#(1);
+
+		$info("Real 1 = %d | Imag 1 = %d | Real 2 = %d | Imag 2 = %d", tb_output_1_real, tb_output_1_imaginary, tb_output_2_real, tb_output_2_imaginary);
+		$info("Real 3 = %d | Imag 3 = %d | Real 4 = %d | Imag 4 = %d", tb_output_3_real, tb_output_3_imaginary, tb_output_4_real, tb_output_4_imaginary);
+		$info("Real 5 = %d | Imag 5 = %d | Real 6 = %d | Imag 6 = %d", tb_output_5_real, tb_output_5_imaginary, tb_output_6_real, tb_output_6_imaginary);
+		$info("Real 7 = %d | Imag 7 = %d | Real 8 = %d | Imag 8 = %d", tb_output_7_real, tb_output_7_imaginary, tb_output_8_real, tb_output_8_imaginary);
+		$info("Real 9 = %d | Imag 9 = %d | Real 10 = %d | Imag 10 = %d", tb_output_9_real, tb_output_9_imaginary, tb_output_10_real, tb_output_10_imaginary);
+		$info("Real 11 = %d | Imag 11 = %d | Real 12 = %d | Imag 12 = %d", tb_output_11_real, tb_output_11_imaginary, tb_output_12_real, tb_output_12_imaginary);
+		$info("Real 13 = %d | Imag 13 = %d | Real 14 = %d | Imag 14 = %d", tb_output_13_real, tb_output_13_imaginary, tb_output_14_real, tb_output_14_imaginary);
+		$info("Real 15 = %d | Imag 15 = %d | Real 16 = %d | Imag 16 = %d", tb_output_15_real, tb_output_15_imaginary, tb_output_16_real, tb_output_16_imaginary);
+		
+	end
 endmodule

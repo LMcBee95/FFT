@@ -16,12 +16,10 @@ module tb_ptsWrapper();
 	reg [15:0] tb_serial_out;
 
 	task load_register;
-		input logic out_strobe;
 		input logic load_strobe;
 		input logic [15:0] in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11,in12,in13,in14,in15,in16;
 		input logic [15:0] in17,in18,in19,in20,in21,in22,in23,in24,in25,in26,in27,in28,in29,in30,in31,in32;
 	begin
-		tb_out_strobe = out_strobe;
 		tb_load_strobe = load_strobe;
 		
 		tb_in1 = in1;
@@ -58,6 +56,12 @@ module tb_ptsWrapper();
 		tb_in32 = in32;
 	end
 	endtask
+	
+	task out_register;
+		input logic out_strobe;
+	begin
+		tb_out_strobe = out_strobe;
+	end
 	
 	// Clock gen block
 	always
@@ -115,7 +119,31 @@ module tb_ptsWrapper();
 	initial
 	begin
 		#Test 1: Loading values
-		load_register(0,1,
+		@(negedge tb_clk);
+		out_register(0);
+		
+		@(negedge tb_clk);
+		load_register(1,
+		16'h0,16'h1,
+		16'h2,16'h3,
+		16'h4,16'h5,
+		16'h6,16'h7,
+		16'h8,16'h9,
+		16'hA,16'hB,
+		16'hC,16'hD,
+		16'hE,16'hF,
+		16'h10,16'h11,
+		16'h12,16'h13,
+		16'h14,16'h15,
+		16'h16,16'h17,
+		16'h18,16'h19,
+		16'h1A,16'h1B,
+		16'h1C,16'h1D,
+		16'h1E,16'h1F
+		);
+		
+		@(negedge tb_clk);
+		load_register(0,
 		16'h0,16'h1,
 		16'h2,16'h3,
 		16'h4,16'h5,
@@ -135,8 +163,13 @@ module tb_ptsWrapper();
 		);
 		
 		#(1);
-		$info("Output: %h",tb_serial_out);
-
+		$info("Output: ",);
+		for(int i = 0; i < 32; i++)
+		begin
+			@(negedge tb_clk);
+			out_register(1);
+			$info("%h", tb_serial_out);
+		end
+		
 	end
-
 endmodule
