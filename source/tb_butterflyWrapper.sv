@@ -234,6 +234,25 @@ module tb_butterflyWrapper();
 	end
 	endtask
 	
+	task reset_dut;
+	begin
+		// Activate the design's reset (does not need to be synchronize with clock)
+		tb_n_reset = 1'b0;
+		
+		// Wait for a couple clock cycles
+		@(posedge tb_clk);
+		@(posedge tb_clk);
+		
+		// Release the reset
+		@(negedge tb_clk);
+		tb_n_reset = 1;
+		
+		// Wait for a while before activating the design
+		@(posedge tb_clk);
+		@(posedge tb_clk);
+	end
+	endtask
+	
 	// DUT portmap
 	butterfly_block DUT(
 		.input_1_real(tb_input_1_real),
@@ -330,6 +349,8 @@ module tb_butterflyWrapper();
 	// Test bench process
 	initial
 	begin
+		reset_dut;
+		
 		load_butterfly1(5, 4, 3, 2, 2 , 1);
 		load_butterfly2(5, 4, 3, 2, 2 , 1);
 		load_butterfly3(5, 4, 3, 2, 2 , 1);
@@ -352,6 +373,8 @@ module tb_butterflyWrapper();
 
 		@(negedge tb_clk);
 		@(negedge tb_clk);
+		reset_dut;
+		
 		load_butterfly1(1, 2, 3, 4, 5, 6);
 		load_butterfly2(7, 8, 9, 10, 11, 12);
 		load_butterfly3(13, 14, 15, 16, 17, 18);
