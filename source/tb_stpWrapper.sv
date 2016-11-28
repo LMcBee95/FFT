@@ -22,6 +22,25 @@ module tb_stpWrapper();
 	end
 	endtask
 	
+	task reset_dut;
+	begin
+		// Activate the design's reset (does not need to be synchronize with clock)
+		tb_n_reset = 1'b0;
+		
+		// Wait for a couple clock cycles
+		@(posedge tb_clk);
+		@(posedge tb_clk);
+		
+		// Release the reset
+		@(negedge tb_clk);
+		tb_n_reset = 1;
+		
+		// Wait for a while before activating the design
+		@(posedge tb_clk);
+		@(posedge tb_clk);
+	end
+	endtask
+	
 	// Clock gen block
 	always
 	begin : CLK_GEN
@@ -43,6 +62,7 @@ module tb_stpWrapper();
 	// Test bench process
 	initial
 	begin
+		reset_dut;
 		//#Test 1: Loading values 0-47
 		@(negedge tb_clk);
 		load_register(0,16'h0);
