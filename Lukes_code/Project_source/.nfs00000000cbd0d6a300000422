@@ -1,0 +1,541 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vlog source/tb_mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 09:52:07 on Nov 26,2016
+# vlog -reportprogress 300 source/tb_mcu2.sv 
+# -- Compiling module tb_mcu2
+# 
+# Top level modules:
+# 	tb_mcu2
+# End time: 09:52:07 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/tb_mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 09:57:39 on Nov 26,2016
+# vlog -reportprogress 300 source/tb_mcu2.sv 
+# -- Compiling module tb_mcu2
+# 
+# Top level modules:
+# 	tb_mcu2
+# End time: 09:57:39 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 10:04:36 on Nov 26,2016
+# vlog -reportprogress 300 source/mcu2.sv 
+# -- Compiling module mcu2
+# 
+# Top level modules:
+# 	mcu2
+# End time: 10:04:36 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/tb_mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 10:05:10 on Nov 26,2016
+# vlog -reportprogress 300 source/tb_mcu2.sv 
+# -- Compiling module tb_mcu2
+# ** Error: source/tb_mcu2.sv(118): (vlog-2730) Undefined variable: 'tb_ff_start'.
+# ** Error: source/tb_mcu2.sv(122): (vlog-2730) Undefined variable: 'tb_samples_written'.
+# ** Error: source/tb_mcu2.sv(122): Expecting numeric digits.
+# End time: 10:05:10 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/tb_mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 10:05:31 on Nov 26,2016
+# vlog -reportprogress 300 source/tb_mcu2.sv 
+# -- Compiling module tb_mcu2
+# ** Error: source/tb_mcu2.sv(122): (vlog-2730) Undefined variable: 'tb_samples_written_count'.
+# ** Error: source/tb_mcu2.sv(122): Expecting numeric digits.
+# End time: 10:05:31 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/tb_mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 10:05:44 on Nov 26,2016
+# vlog -reportprogress 300 source/tb_mcu2.sv 
+# -- Compiling module tb_mcu2
+# ** Error: source/tb_mcu2.sv(122): Expecting numeric digits.
+# End time: 10:05:45 on Nov 26,2016, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/tb_mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 10:05:58 on Nov 26,2016
+# vlog -reportprogress 300 source/tb_mcu2.sv 
+# -- Compiling module tb_mcu2
+# 
+# Top level modules:
+# 	tb_mcu2
+# End time: 10:05:58 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/twiddleRom.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 10:27:57 on Nov 26,2016
+# vlog -reportprogress 300 source/twiddleRom.sv 
+# -- Compiling module twiddle_rom
+# ** Error: source/twiddleRom.sv(9): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(10): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(13): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(14): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(17): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(18): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(21): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(22): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(25): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(26): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(29): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(30): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(33): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(34): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(37): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(38): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(41): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(42): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(45): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(46): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(49): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(50): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(53): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(54): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(57): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(58): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(61): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(62): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(65): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(66): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(69): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(70): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(73): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(74): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(77): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(78): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(81): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(82): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(85): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(86): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(89): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(90): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(93): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(94): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(97): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(98): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(101): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(102): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(105): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(106): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(109): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(110): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(113): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(114): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(117): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(118): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(121): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(122): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(125): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(126): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(129): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(130): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(133): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(134): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(137): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(138): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(141): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(142): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(145): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(146): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(149): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(150): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(153): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(154): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(157): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(158): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(161): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(162): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(165): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(166): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(169): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(170): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(173): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(174): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(177): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(178): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(181): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(182): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(185): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(186): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(189): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(190): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(193): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(194): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(197): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(198): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(201): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(202): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(205): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(206): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(209): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(210): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(213): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(214): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(217): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(218): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(221): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(222): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(225): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(226): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(229): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(230): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(233): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(234): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(237): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(238): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(241): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(242): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(245): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(246): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(249): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(250): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(253): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(254): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(257): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(258): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(261): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(262): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(265): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(266): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(269): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(270): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(273): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(274): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(277): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(278): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(281): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(282): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(285): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(286): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(289): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(290): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(293): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(294): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(297): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(298): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(301): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(302): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(305): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(306): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(309): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(310): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(313): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(314): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(317): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(318): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(321): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(322): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(325): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(326): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(329): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(330): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(333): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(334): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(337): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(338): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(341): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(342): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(345): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(346): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(349): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(350): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(353): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(354): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(357): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(358): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(361): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(362): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(365): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(366): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(369): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(370): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(373): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(374): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(377): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(378): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(381): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(382): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(385): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(386): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(389): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(390): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(393): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(394): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(397): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(398): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(401): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(402): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(405): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(406): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(409): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(410): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(413): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(414): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(417): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(418): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(421): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(422): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(425): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(426): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(429): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(430): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(433): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(434): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(437): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(438): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(441): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(442): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(445): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(446): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(449): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(450): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(453): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(454): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(457): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(458): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(461): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(462): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(465): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(466): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(469): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(470): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(473): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(474): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(477): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(478): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(481): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(482): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(485): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(486): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(489): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(490): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(493): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(494): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(497): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(498): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(501): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(502): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(505): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(506): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(509): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(510): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(513): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(514): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(517): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(518): (vlog-2110) Illegal reference to net "twiddle_img".
+# ** Error: source/twiddleRom.sv(521): (vlog-2110) Illegal reference to net "twiddle_real".
+# ** Error: source/twiddleRom.sv(522): (vlog-2110) Illegal reference to net "twiddle_img".
+# End time: 10:27:57 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 258, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/twiddleRom.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 10:29:09 on Nov 26,2016
+# vlog -reportprogress 300 source/twiddleRom.sv 
+# -- Compiling module twiddleRom
+# 
+# Top level modules:
+# 	twiddleRom
+# End time: 10:29:09 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/timers.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 10:52:38 on Nov 26,2016
+# vlog -reportprogress 300 source/timers.sv 
+# -- Compiling module timers
+# ** Error: source/timers.sv(29): (vlog-2388) 'samples_loaded_done' already declared in this scope (timers).
+# ** Error: source/timers.sv(31): (vlog-2388) 'samples_written_done' already declared in this scope (timers).
+# End time: 10:52:38 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/timers.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 10:52:53 on Nov 26,2016
+# vlog -reportprogress 300 source/timers.sv 
+# -- Compiling module timers
+# 
+# Top level modules:
+# 	timers
+# End time: 10:52:53 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/tb_timers.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 10:54:13 on Nov 26,2016
+# vlog -reportprogress 300 source/tb_timers.sv 
+# -- Compiling module tb_timers
+# 
+# Top level modules:
+# 	tb_timers
+# End time: 10:54:13 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/mini_setup.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 11:00:51 on Nov 26,2016
+# vlog -reportprogress 300 source/mini_setup.sv 
+# -- Compiling module mini_setup
+# ** Error: source/mini_setup.sv(116): near "EOF": syntax error, unexpected end of source code
+# End time: 11:00:51 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/mini_setup.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 11:01:03 on Nov 26,2016
+# vlog -reportprogress 300 source/mini_setup.sv 
+# -- Compiling module mini_setup
+# 
+# Top level modules:
+# 	mini_setup
+# End time: 11:01:03 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/tb_mini_setup.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 11:03:47 on Nov 26,2016
+# vlog -reportprogress 300 source/tb_mini_setup.sv 
+# -- Compiling module tb_mini_setup
+# ** Error: source/tb_mini_setup.sv(70): (vlog-2110) Illegal reference to net "tb_fft_start".
+# End time: 11:03:47 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/tb_mini_setup.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 11:04:12 on Nov 26,2016
+# vlog -reportprogress 300 source/tb_mini_setup.sv 
+# -- Compiling module tb_mini_setup
+# 
+# Top level modules:
+# 	tb_mini_setup
+# End time: 11:04:12 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/mini_setup.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 11:12:06 on Nov 26,2016
+# vlog -reportprogress 300 source/mini_setup.sv 
+# -- Compiling module mini_setup
+# ** Error: source/mini_setup.sv(134): near "EOF": syntax error, unexpected end of source code
+# End time: 11:12:06 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/mini_setup.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 11:12:14 on Nov 26,2016
+# vlog -reportprogress 300 source/mini_setup.sv 
+# -- Compiling module mini_setup
+# 
+# Top level modules:
+# 	mini_setup
+# End time: 11:12:14 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/address_output.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 11:16:51 on Nov 26,2016
+# vlog -reportprogress 300 source/address_output.sv 
+# -- Compiling module address_output
+# 
+# Top level modules:
+# 	address_output
+# End time: 11:16:51 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 12:01:06 on Nov 26,2016
+# vlog -reportprogress 300 source/mcu2.sv 
+# -- Compiling module mcu2
+# ** Warning: source/mcu2.sv(98): (vlog-2182) 'samples_loaded_done_held' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	mcu2
+# End time: 12:01:06 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog source/mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 12:09:08 on Nov 26,2016
+# vlog -reportprogress 300 source/mcu2.sv 
+# -- Compiling module mcu2
+# ** Error: source/mcu2.sv(114): (vlog-2730) Undefined variable: 'samples_loaded_done_held'.
+# End time: 12:09:08 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 12:09:23 on Nov 26,2016
+# vlog -reportprogress 300 source/mcu2.sv 
+# -- Compiling module mcu2
+# 
+# Top level modules:
+# 	mcu2
+# End time: 12:09:23 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/timers.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 12:19:21 on Nov 26,2016
+# vlog -reportprogress 300 source/timers.sv 
+# -- Compiling module timers
+# 
+# Top level modules:
+# 	timers
+# End time: 12:19:21 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 12:40:13 on Nov 26,2016
+# vlog -reportprogress 300 source/mcu2.sv 
+# -- Compiling module mcu2
+# ** Error: source/mcu2.sv(87): (vlog-2730) Undefined variable: 'nextSTATE'.
+# End time: 12:40:13 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 12:40:24 on Nov 26,2016
+# vlog -reportprogress 300 source/mcu2.sv 
+# -- Compiling module mcu2
+# 
+# Top level modules:
+# 	mcu2
+# End time: 12:40:24 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 13:20:42 on Nov 26,2016
+# vlog -reportprogress 300 source/mcu2.sv 
+# -- Compiling module mcu2
+# ** Error: source/mcu2.sv(46): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# End time: 13:20:42 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog source/mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 13:20:56 on Nov 26,2016
+# vlog -reportprogress 300 source/mcu2.sv 
+# -- Compiling module mcu2
+# 
+# Top level modules:
+# 	mcu2
+# End time: 13:20:56 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog source/mcu2.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 13:22:01 on Nov 26,2016
+# vlog -reportprogress 300 source/mcu2.sv 
+# -- Compiling module mcu2
+# 
+# Top level modules:
+# 	mcu2
+# End time: 13:22:01 on Nov 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
