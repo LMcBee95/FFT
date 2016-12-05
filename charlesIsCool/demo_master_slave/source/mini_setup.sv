@@ -14,7 +14,7 @@ module mini_setup (
 	output reg sram_read_ena,
 	output reg sram_write_ena,
 	output reg [15:0] pts_serial_out,
-	output reg [9:0]output_address,
+	output reg [8:0]output_address,
 	input reg [15:0] sample,
 	output reg fft_done
 

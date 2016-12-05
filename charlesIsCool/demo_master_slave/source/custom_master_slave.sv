@@ -36,8 +36,11 @@ module custom_master_slave #(
 
 
 	//CUstom interface
-	output logic fft_start,
-	input logic fft_done
+	output logic f_rden,
+	output logic f_wren,
+	output logic [8:0]f_address,
+	input logic [15:0]f_q,
+	output logic [15:0]f_data
 		  
 );
 
@@ -59,33 +62,37 @@ state_t state, nextState;
 reg sCon;
 reg mCon;
 
-reg f_rden;
+reg fft_done;
+reg fft_start;
+
+
+//reg f_rden;
 reg s_rden;
 reg m_rden;
 reg ffrden;
 
-reg f_wren;
+//reg f_wren;
 reg s_wren;
 reg m_wren;
 reg ffwren;
 
-reg [8:0]f_address;
+//reg [8:0]f_address;
 reg [8:0]s_address;
 reg [8:0]m_address;
 reg [8:0]ffaddress;
 
-reg [15:0]f_q;
+//reg [15:0]f_q;
 reg [15:0]s_q;
 reg [15:0]m_q;
 reg [15:0]ffq;
 
-reg [15:0]f_data;
+//reg [15:0]f_data;
 reg [15:0]s_data;
 reg [15:0]m_data;
 reg [15:0]ffdata;
 
 
-	on_chip_sram_wrapper sram
+	/*on_chip_sram_wrapper sram
 	(
 		// Test bench control signals
 		.mem_clr(1'b0),
@@ -102,7 +109,7 @@ reg [15:0]ffdata;
 		.address(f_address),
 		.read_data(f_q),
 		.write_data(f_data)
-	);
+	);*/
 
 
 	mini_setup FFT_BLOCK(

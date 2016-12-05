@@ -12,6 +12,9 @@ localparam DATAWIDTH = 32 ;// DATAWIDTH specifies the data width. Default 32 bit
 localparam NUMREGS = 8 ;      		// Number of Internal Registers for Custom Logic
 localparam REGWIDTH = 32;      		// Data Width for the Internal Registers. Default 32 bits
 localparam START_BYTE = 9'h1FF;
+	localparam TB_ADDR_SIZE_BITS	= 9; 	// 16 => 64K Words in Memory
+	localparam TB_CAPACITY_WORDS	= (2 ** TB_ADDR_SIZE_BITS);
+	localparam TB_MAX_ADDRESS			= (TB_CAPACITY_WORDS - 1);
 
 // Shared Test Variables
 reg tb_clk;
@@ -32,7 +35,7 @@ reg tb_slave_chipselect;
 
 // Declare test bench signals
 integer tb_test_case;
-reg tb_test_rst;;
+reg tb_test_rst;
 reg tb_test_slave_read;
 reg tb_test_slave_write;
 reg [SLAVE_ADDRESSWIDTH-1:0]tb_test_slave_address;
@@ -55,6 +58,17 @@ reg tb_test_master_readdatavalid;
 reg tb_test_master_waitrequest;
 
 
+reg f_wren;
+reg f_rden;
+reg [15:0]f_data;
+reg [8:0]f_address;
+reg [15:0]f_q;
+
+integer unsigned tb_dump_file_number;
+	integer unsigned tb_last_address;
+	integer unsigned tb_start_address;
+reg tb_mem_dump;	// Active high strobe for at least 1 simulation timestep to dump all values modified since most recent mem_clr activation to
+
 // DUT port map
 	custom_master_slave DUT(
 			.clk(tb_clk),
@@ -76,12 +90,38 @@ reg tb_test_master_waitrequest;
 			.master_read(tb_master_read),
 			.master_readdata(tb_master_readdata),
 			.master_readdatavalid(tb_master_readdatavalid),
-			.master_waitrequest(tb_master_waitrequest)
+			.master_waitrequest(tb_master_waitrequest),
+
+			.f_wren(f_wren),
+			.f_rden(f_rden),
+			.f_data(f_data),
+			.f_address(f_address),
+			.f_q(f_q)
 
 		       );
 
 
 
+
+
+	on_chip_sram_wrapper sram
+	(
+		// Test bench control signals
+		.mem_clr(1'b0),
+		.mem_init(1'b0),
+		.mem_dump(tb_mem_dump),
+		.verbose(1'b0),
+		.init_file_number(1'b0),
+		.dump_file_number(tb_dump_file_number),
+		.start_address(tb_start_address),
+		.last_address(tb_last_address),
+		// Memory interface signals
+		.read_enable(f_rden),
+		.write_enable(f_wren),
+		.address(f_address),
+		.read_data(f_q),
+		.write_data(f_data)
+	);
 
 	// Connect individual test input bits to a vector for easier testing
 	assign tb_n_rst = tb_test_rst;
@@ -111,6 +151,10 @@ reg tb_test_master_waitrequest;
 	tb_test_slave_address = 9'h00;
 	tb_test_slave_chipselect = 1'b0;
 	tb_test_master_waitrequest = 1'b0;
+		tb_mem_dump					<= 0;
+		tb_dump_file_number	<= 0;
+		tb_start_address		<= 0;
+
 tb_test_master_readdata ='0;
 tb_test_master_readdatavalid = '0;
 
@@ -160,7 +204,18 @@ tb_test_master_readdatavalid = '0;
 	#30;
 	tb_test_master_waitrequest = 1'b0;
 	#10;
+
+	@(posedge tb_master_write);
 	end
+
+		$info("Testing Memory Dump Feature");
+		tb_mem_dump					<= 1;
+		tb_dump_file_number	<=	0;
+		tb_start_address		<= 0;
+		tb_last_address			<= TB_MAX_ADDRESS;
+		#CLK_PERIOD;
+		
+		tb_mem_dump	<= 0;
 	end
 	final
 	begin
