@@ -198,6 +198,7 @@ tb_test_master_readdatavalid = '0;
 #1000;
 
 #10;
+	@(posedge tb_master_write);
 	for(tb_test_case = 0;tb_test_case <512;tb_test_case = tb_test_case +1)
 	begin
 	tb_test_master_waitrequest = 1'b1;
@@ -205,7 +206,7 @@ tb_test_master_readdatavalid = '0;
 	tb_test_master_waitrequest = 1'b0;
 	#10;
 
-	@(posedge tb_master_write);
+
 	end
 
 		$info("Testing Memory Dump Feature");

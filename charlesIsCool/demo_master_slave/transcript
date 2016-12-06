@@ -8,25 +8,232 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -i -t ps source_work.tb_custom_master_slave 
-# Start time: 17:56:06 on Dec 05,2016
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -i -t ps mapped_work.tb_custom_master_slave 
+# Start time: 16:14:32 on Dec 06,2016
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vopt-143) Recognized 1 FSM in module "custom_master_slave(fast)".
-# ** Note: (vopt-143) Recognized 1 FSM in module "mcu2(fast)".
+# ** Warning: mapped/custom_master_slave.v(14765): (vopt-2685) [TFMPC] - Too few port connections for 'add_42'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(14765): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(14768): (vopt-2685) [TFMPC] - Too few port connections for 'add_41'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(14768): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(14770): (vopt-2685) [TFMPC] - Too few port connections for 'add_48'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(14770): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(14775): (vopt-2685) [TFMPC] - Too few port connections for 'add_47'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(14775): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(14780): (vopt-2685) [TFMPC] - Too few port connections for 'sub_59'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(14780): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(14782): (vopt-2685) [TFMPC] - Too few port connections for 'sub_58'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(14782): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(18305): (vopt-2685) [TFMPC] - Too few port connections for 'add_42'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(18305): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(18308): (vopt-2685) [TFMPC] - Too few port connections for 'add_41'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(18308): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(18311): (vopt-2685) [TFMPC] - Too few port connections for 'add_48'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(18311): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(18316): (vopt-2685) [TFMPC] - Too few port connections for 'add_47'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(18316): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(18321): (vopt-2685) [TFMPC] - Too few port connections for 'sub_59'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(18321): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(18323): (vopt-2685) [TFMPC] - Too few port connections for 'sub_58'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(18323): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(21832): (vopt-2685) [TFMPC] - Too few port connections for 'add_42'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(21832): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(21835): (vopt-2685) [TFMPC] - Too few port connections for 'add_41'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(21835): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(21838): (vopt-2685) [TFMPC] - Too few port connections for 'add_48'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(21838): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(21843): (vopt-2685) [TFMPC] - Too few port connections for 'add_47'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(21843): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(21848): (vopt-2685) [TFMPC] - Too few port connections for 'sub_59'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(21848): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(21850): (vopt-2685) [TFMPC] - Too few port connections for 'sub_58'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(21850): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(25327): (vopt-2685) [TFMPC] - Too few port connections for 'add_42'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(25327): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(25330): (vopt-2685) [TFMPC] - Too few port connections for 'add_41'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(25330): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(25332): (vopt-2685) [TFMPC] - Too few port connections for 'add_48'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(25332): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(25337): (vopt-2685) [TFMPC] - Too few port connections for 'add_47'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(25337): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(25342): (vopt-2685) [TFMPC] - Too few port connections for 'sub_59'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(25342): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(25344): (vopt-2685) [TFMPC] - Too few port connections for 'sub_58'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(25344): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(28845): (vopt-2685) [TFMPC] - Too few port connections for 'add_42'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(28845): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(28849): (vopt-2685) [TFMPC] - Too few port connections for 'add_41'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(28849): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(28851): (vopt-2685) [TFMPC] - Too few port connections for 'add_48'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(28851): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(28856): (vopt-2685) [TFMPC] - Too few port connections for 'add_47'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(28856): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(28861): (vopt-2685) [TFMPC] - Too few port connections for 'sub_59'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(28861): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(28863): (vopt-2685) [TFMPC] - Too few port connections for 'sub_58'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(28863): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(32357): (vopt-2685) [TFMPC] - Too few port connections for 'add_42'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(32357): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(32359): (vopt-2685) [TFMPC] - Too few port connections for 'add_41'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(32359): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(32362): (vopt-2685) [TFMPC] - Too few port connections for 'add_48'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(32362): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(32367): (vopt-2685) [TFMPC] - Too few port connections for 'add_47'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(32367): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(32372): (vopt-2685) [TFMPC] - Too few port connections for 'sub_59'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(32372): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(32374): (vopt-2685) [TFMPC] - Too few port connections for 'sub_58'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(32374): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(35876): (vopt-2685) [TFMPC] - Too few port connections for 'add_42'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(35876): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(35879): (vopt-2685) [TFMPC] - Too few port connections for 'add_41'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(35879): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(35882): (vopt-2685) [TFMPC] - Too few port connections for 'add_48'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(35882): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(35887): (vopt-2685) [TFMPC] - Too few port connections for 'add_47'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(35887): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(35892): (vopt-2685) [TFMPC] - Too few port connections for 'sub_59'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(35892): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(35894): (vopt-2685) [TFMPC] - Too few port connections for 'sub_58'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(35894): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(39385): (vopt-2685) [TFMPC] - Too few port connections for 'add_42'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(39385): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(39388): (vopt-2685) [TFMPC] - Too few port connections for 'add_41'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(39388): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(39390): (vopt-2685) [TFMPC] - Too few port connections for 'add_48'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(39390): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(39395): (vopt-2685) [TFMPC] - Too few port connections for 'add_47'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(39395): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(39400): (vopt-2685) [TFMPC] - Too few port connections for 'sub_59'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(39400): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(39402): (vopt-2685) [TFMPC] - Too few port connections for 'sub_58'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(39402): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(1826): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_PartRem_0_7 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(1826): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(1847): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_PartRem_0_3 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(1847): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(1857): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_PartRem_0_1 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(1857): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(1949): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_PartRem_0_4 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(1949): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(1956): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_PartRem_0_2 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(1956): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(1964): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_PartRem_0_6 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(1964): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(1974): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_PartRem_0_5 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(1974): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(1985): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_B5 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(1985): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(2010): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_B6 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(2010): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(2035): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_B7 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(2035): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(2201): (vopt-2685) [TFMPC] - Too few port connections for '\div_49/u_div/u_add_B3 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(2201): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(4995): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_PartRem_2_4 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(4995): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(5053): (vopt-2685) [TFMPC] - Too few port connections for 'add_61_2'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5053): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(5057): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_PartRem_0_2 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5057): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(5065): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_PartRem_0_1 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5065): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(5073): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_PartRem_0_5 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5073): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(5262): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_PartRem_0_3 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5262): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(5274): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_B3 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5274): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(5299): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_PartRem_0_7 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5299): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(5319): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_PartRem_0_6 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5319): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(5363): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_B6 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5363): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(5388): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_PartRem_0_4 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5388): (vopt-2718) [TFMPC] - Missing connection for port 'SUM'.
+# ** Warning: mapped/custom_master_slave.v(5486): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_B5 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5486): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(5511): (vopt-2685) [TFMPC] - Too few port connections for '\div_61/u_div/u_add_B7 '.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(5511): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/custom_master_slave.v(46812): (vopt-2685) [TFMPC] - Too few port connections for 'add_217_aco'.  Expected 5, found 4.
+# ** Warning: mapped/custom_master_slave.v(46812): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
 # Loading sv_std.std
 # Loading work.tb_custom_master_slave(fast)
+# Loading work.stpWrapper(fast)
+# Loading work.ButterflyWrapper(fast)
+# Loading work.ptsWrapper(fast)
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.math_real(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffposx1(metastabilitywrapperarch)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.prim(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffposx1_core(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand3x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.or2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr(metastabilitywrapperarch)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr_core(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.latch(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.hax1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.or2x2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xnor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.and2x2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.and2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx4(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.bufx2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx8(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.bufx4(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.mux2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nor3x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.fax1(behavioral)#1
 # Loading ieee.numeric_std(body)
 # Loading work.on_chip_sram_wrapper(wrapper)#1
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.simple_scale_mem(scaleable_memory)#1
-add wave *
-run 4500000 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_custom_master_slave/sram/MEM
-# This test bench was not run long enough to execute all test cases. Please run this test bench for at least a total of ns
-# End time: 17:59:17 on Dec 05,2016, Elapsed time: 0:03:11
-# Errors: 0, Warnings: 1
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(14031): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b1/add_42/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(14067): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b1/add_41/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(17579): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b2/add_42/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(17615): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b2/add_41/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(21109): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b3/add_42/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(21145): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b3/add_41/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(24614): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b4/add_42/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(24650): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b4/add_41/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(28113): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b5/add_42/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(28149): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b5/add_41/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(31628): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b6/add_42/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(31663): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b6/add_41/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(35149): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b7/add_42/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(35185): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b7/add_41/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(38661): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b8/add_42/U1_15
+# ** Warning: (vsim-8822) mapped/custom_master_slave.v(38697): [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#         Region: /tb_custom_master_slave/DUT/FFT_BLOCK/BUTTERFLYWRAPPER/b8/add_41/U1_15
+# This test bench has run to completion
+# End time: 16:15:30 on Dec 06,2016, Elapsed time: 0:00:58
+# Errors: 0, Warnings: 162

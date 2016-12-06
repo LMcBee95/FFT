@@ -1,9 +1,9 @@
 QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
-Start time: 17:56:01 on Dec 05,2016
+Start time: 15:42:48 on Dec 06,2016
 vlog -sv -work source_work source/ButterflyWrapper.sv 
 -- Compiling module ButterflyWrapper
 
 Top level modules:
 	ButterflyWrapper
-End time: 17:56:01 on Dec 05,2016, Elapsed time: 0:00:00
+End time: 15:42:48 on Dec 06,2016, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0

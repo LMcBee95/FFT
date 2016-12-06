@@ -205,9 +205,9 @@ tb_test_master_readdatavalid = '0;
 	tb_test_master_waitrequest = 1'b0;
 	#10;
 
-	@(posedge tb_master_write);
-	end
 
+	end
+	@(posedge tb_master_write);
 		$info("Testing Memory Dump Feature");
 		tb_mem_dump					<= 1;
 		tb_dump_file_number	<=	0;

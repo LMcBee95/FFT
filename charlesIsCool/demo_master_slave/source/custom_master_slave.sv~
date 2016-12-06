@@ -81,11 +81,6 @@ reg [8:0]s_address;
 reg [8:0]m_address;
 reg [8:0]ffaddress;
 
-//reg [15:0]f_q;
-reg [15:0]s_q;
-reg [15:0]m_q;
-reg [15:0]ffq;
-
 //reg [15:0]f_data;
 reg [15:0]s_data;
 reg [15:0]m_data;
@@ -121,7 +116,7 @@ reg [15:0]ffdata;
 		.sram_write_ena(ffwren),
 		.pts_serial_out(ffdata),
 		.output_address(ffaddress),
-		.sample(ffq),
+		.sample(f_q),
 		.fft_done(fft_done)
 	);
 
@@ -232,52 +227,51 @@ end
 
 // Output Logic 
 
+
+
 always_comb begin 
 	master_write = 1'b0;
 	master_read = 1'b0;
 	master_writedata = 9'h0;
 	master_address = 32'h1bd;
+
 	m_rden = 1'b0;
 	m_wren = 1'b0;
 	m_address = 9'b0;
-	mCon <= 1'b0;
+	mCon = 1'b0;
+	m_data = '0;
 	case(state) 
 		WRITE : begin 
-			master_write = 1;
 			master_address =  address;
 			master_writedata = f_q;
 			master_write =1'b1;
 
 
-			mCon <= 1'b1;
+			mCon = 1'b1;
 			m_rden = 1'b1;
 			m_wren = 1'b0;
 
 			m_address = reg_index;
-			m_data = '0;
+
 		end 
 	endcase
 end
 
 always_comb begin 
+	f_rden = ffrden;
+	f_wren = ffwren;
+	f_data = ffdata;
+	f_address = ffaddress;
 	if(mCon ==1'b1) begin
 		f_rden = m_rden;
 		f_wren = m_wren;
 		f_data = m_data;
 		f_address = m_address;
-		m_q = f_q;
 	end else if(sCon==1'b1) begin
 		f_rden = s_rden;
 		f_wren = s_wren;
 		f_data = s_data;
 		f_address = s_address;
-		s_q = f_q;
-	end else begin
-		f_rden = ffrden;
-		f_wren = ffwren;
-		f_data = ffdata;
-		f_address = ffaddress;
-		ffq = f_q;
 	end
 end
 
