@@ -5,7 +5,6 @@
 ##############################################################################
 
 # Include the common/shared variables for the course to minimize potentially stale values
-# Note: the release_make_vars already includes the common/public ones
 include /home/ecegrid/a/ece337/Course_Prod/course_make_vars
 
 ##############################################################################
@@ -16,17 +15,12 @@ include /home/ecegrid/a/ece337/Course_Prod/course_make_vars
 # (do not include the source folder in the name)
 # NOTE: YOU WILL NEED TO SET THIS VARIABLE'S VALUE WHEN WORKING WITH HEIRARCHICAL DESIGNS
 # AND THE AUTOMATED GRADING SYSTEM
-COMPONENT_FILES	:= flex_counter.sv twiddle_index2.sv address_output.sv address_order.sv timers.sv mcu2.sv twiddleRom.sv load_controller.sv fixed_point_math.sv ptsWrapper.sv stpWrapper.sv butterfly_block.sv ButterflyWrapper.sv mem_buff.sv
+COMPONENT_FILES	:= flex_counter.sv twiddle_index2.sv address_output.sv address_order.sv timers.sv mcu2.sv twiddleRom.sv load_controller.sv fixed_point_math.sv ptsWrapper.sv stpWrapper.sv butterfly_block.sv ButterflyWrapper.sv mem_buff.sv mini_setup.sv
 
 # Specify the name of the top level file (do not include the source folder in the name)
 # NOTE: YOU WILL NEED TO SET THIS VARIABLE'S VALUE WHEN WORKING WITH HEIRARCHICAL DESIGNS
 # AND THE AUTOMATED GRADING SYSTEM
-#TOP_LEVEL_FILE	:= twiddle_index2.sv
-#TOP_LEVEL_FILE := address_output.sv
-#TOP_LEVEL_FILE := address_order.sv
-#TOP_LEVEL_FILE := timers.sv
-#TOP_LEVEL_FILE := mcu2.sv
-TOP_LEVEL_FILE := mini_setup.sv
+TOP_LEVEL_FILE	:= custom_master_slave.sv
 
 # Specify the filepath of the test bench you want to use (ie. tb_top_level.sv)
 # (do not include the source folder in the name)
@@ -34,7 +28,10 @@ TEST_BENCH	:= tb_$(TOP_LEVEL_FILE)
 
 # Fill in the names of any test bench helper code files (code files referenced by your testbenches
 # other than the actual design files)( do not include the 'source/')
-TB_HELPER_FILES	:= 
+# If you are not using one of the sram models simply remove the correspoinding
+# filename from this variable
+#TB_HELPER_FILES	:= off_chip_sram_wrapper.vhd on_chip_sram_wrapper.vhd
+TB_HELPER_FILES	:= on_chip_sram_wrapper.vhd
 
 # Get the top level design and test_bench module names
 TB_MODULE		:= $(notdir $(basename $(TEST_BENCH)))
@@ -46,10 +43,12 @@ GATE_LIB		:= $(AMI_05_LIB)
 S_WORK_LIB := source_work
 M_WORK_LIB := mapped_work
 
-LIB_CREATE	:= vlib
-COMPILE 		:= vlog -sv
-SIMULATE		:= vsim -Lf $(LABS_IP_LIB) -L $(GATE_LIB) -L $(GOLD_LIB) +no_glitch_msg -coverage -voptargs="+acc"
-DC_SHELL		:= dc_shell-t
+# Automatically handle whether to running on the grid or not
+LIB_CREATE		:= vlib
+VLOG_COMPILE 	:= vlog -sv
+VHDL_COMPILE 	:= vcom
+SIMULATE			:= vsim -Lf $(LABS_IP_LIB) -L $(GATE_LIB) -L $(GOLD_LIB) +no_glitch_msg -coverage
+DC_SHELL			:= dc_shell-t
 
 ##############################################################################
 # Designate that all "intermediate" files created during chaing make rules
@@ -62,10 +61,10 @@ DC_SHELL		:= dc_shell-t
 # Designate targets that do not correspond directly to files so that they are
 # run every time they are called
 ##############################################################################
-.PHONY: help clean veryclean
-.PHONY: print_vars
-.PHONY: sim_full_source sim_full_mapped
-.PHONY: syn_mapped
+.phony: help clean veryclean
+.phony: print_vars
+.phony: sim_full_source sim_full_mapped
+.phony: syn_mapped
 
 ##############################################################################
 # Make the default target (the one called when no specific one is invoked) to
@@ -131,9 +130,8 @@ clean:
 	@rm -f *.wlf *.svf transcript
 	@rm -f *.tran
 	@rm -f *.scomp *.mcomp
-	@rm -f do_mapping.tcl
 	@echo -e "Done\n\n"
-
+	
 veryclean:
 	@$(MAKE) --no-print-directory clean
 	@echo -e "Removing synthesized files, synthesis logs, and synthesis reports"
@@ -155,7 +153,7 @@ print_vars:
 	@echo -e "Mapped work library: '$(M_WORK_LIB)'"
 
 ##############################################################################
-# General Compilation Targets
+# Compilation Targets
 ##############################################################################
 
 # Define a pattern rule to automatically create the work library for a design source compile
@@ -165,46 +163,80 @@ $(S_WORK_LIB):
 	@$(LIB_CREATE) $@
 
 # Define a pattern rule to automatically compile updated source files for a design
-$(S_WORK_LIB)/%: source/%.sv | $(S_WORK_LIB)
-	@echo -e "Compiling '$<' into work library '$(S_WORK_LIB)'"
-	@$(COMPILE) -work $(S_WORK_LIB) $< | tee $*.scomp ; exit "$${PIPESTATUS[0]}"
-	@touch $@
-	@echo -e "Done compiling '$<' into work library '$(S_WORK_LIB)'"
+$(S_WORK_LIB)/%: source/%.sv $(S_WORK_LIB)
+	@echo -e "Compiling '$<' into work library '$(word 2, $^)'"
+	@rm -rf $@
+	@$(VLOG_COMPILE) -work $(word 2, $^) $< > $*.scomp
+	@echo -e "Done compiling '$<' into work library '$(word 2, $^)'"
 
-# Define a pattern rule to for use at commandline to compile source versions
-source_%: $(S_WORK_LIB)/%
-	@exit 0 # We cannot have an empty pattern rule in a makefile
+$(S_WORK_LIB)/%: source/%.vhd $(S_WORK_LIB)
+	@echo -e "Compiling '$<' into work library '$(word 2, $^)'"
+	@rm -rf $@
+	@$(VHDL_COMPILE) -work $(word 2, $^) $< > $*.scomp
+	@echo -e "Done compiling '$<' into work library '$(word 2, $^)'"
+	
+# Define a pattern rule to for use at commandline to compile source versions and
+# send feedback to terminal instead of log file
+source_%: source/%.sv $(S_WORK_LIB)
+	@echo -e "Compiling '$<' into work library '$(word 2, $^)'"
+	@rm -rf $(word 2, $^)/$*
+	@$(VLOG_COMPILE) -work $(word 2, $^) $< > $*.scomp
+	@cat $*.scomp
+	@echo -e "Done compiling '$<' into work library '$(word 2, $^)'"
+
+source_%: source/%.vhd $(S_WORK_LIB)
+	@echo -e "Compiling '$<' into work library '$(word 2, $^)'"
+	@rm -rf $(word 2, $^)/$*
+	@$(VHDL_COMPILE) -work $(word 2, $^) $< > $*.scomp
+	@cat $*.scomp
+	@echo -e "Done compiling '$<' into work library '$(word 2, $^)'"
 
 # Define a pattern rule to automatically create the work library for a full design mapped compile
 $(M_WORK_LIB):
 	@echo -e "Creating work library: $@"
 	@rm -rf $@
 	@$(LIB_CREATE) $@
-
+	
 # Define a pattern rule to automatically compile updated mapped design files for a full mapped design
-$(M_WORK_LIB)/%: mapped/%.v | $(M_WORK_LIB)
-	@echo -e "Compiling '$<' into work library '$(M_WORK_LIB)'"
-	@$(COMPILE) -work $(M_WORK_LIB) $< | tee $*.mcomp ; exit "$${PIPESTATUS[0]}"
-	@touch $@
-	@echo -e "Done compiling '$<' into work library '$(M_WORK_LIB)'"
+$(M_WORK_LIB)/%: mapped/%.v $(M_WORK_LIB)
+	@echo -e "Compiling '$<' into work library '$(word 2, $^)'"
+	@rm -rf $@
+	@$(VLOG_COMPILE) -work $(word 2, $^) $< > $*.mcomp
+	@echo -e "Done compiling '$<' into work library '$(word 2, $^)'"
 
 # Define a pattern rule to automatically compile updated test bench files for a full mapped design
-$(M_WORK_LIB)/tb_%: source/tb_%.sv | $(M_WORK_LIB)
-	@echo -e "Compiling '$<' into work library '$(M_WORK_LIB)'"
-	@$(COMPILE) -work $(M_WORK_LIB) $< | tee $*.mcomp; exit "$${PIPESTATUS[0]}"
-	@touch $@
-	@echo -e "Done compiling '$<' into work library '$(M_WORK_LIB)'"
+$(M_WORK_LIB)/tb_%: source/tb_%.sv $(M_WORK_LIB)
+	@echo -e "Compiling '$<' into work library '$(word 2, $^)'"
+	@rm -rf $@
+	@$(VLOG_COMPILE) -work $(word 2, $^) $< > $*.mcomp
+	@echo -e "Done compiling '$<' into work library '$(word 2, $^)'"
 
-# Define a pattern rule to for use at commandline to compile mapped versions
-mapped_%: $(M_WORK_LIB)/%
-	@exit 0 # We cannot have an empty pattern rule in a makefile
+$(M_WORK_LIB)/%: source/%.vhd $(M_WORK_LIB)
+	@echo -e "Compiling '$<' into work library '$(word 2, $^)'"
+	@rm -rf $@
+	@$(VHDL_COMPILE) -work $(word 2, $^) $< > $*.mcomp
+	@echo -e "Done compiling '$<' into work library '$(word 2, $^)'"
 
-# Define a pattern rule to for use at commandline to compile testbenches
-mapped_tb_%: $(M_WORK_LIB)/tb_%
-	@exit 0 # We cannot have an empty pattern rule in a makefile
+# Define a pattern rule to for use at commandline to compile mapped versions and
+# send feedback to terminal instead of log file
+mapped_%: mapped/%.v $(M_WORK_LIB)
+	@echo -e "Compiling '$<' into work library '$(word 2, $^)'"
+	@rm -rf $(word 2, $^)/$*
+	@$(VLOG_COMPILE) -work $(word 2, $^) $< > $*.mcomp
+	@cat $*.mcomp
+	@echo -e "Done compiling '$<' into work library '$(word 2, $^)'"
+
+# Define a pattern rule to for use at commandline to compile testbenches for mapped
+# versions and send feedback to terminal instead of log file
+mapped_tb_%.sv: source/tb_%.sv $(M_WORK_LIB)
+	@echo -e "Compiling '$<' into work library '$(word 2, $^)'"
+	@rm -rf $(word 2, $^)/tb_$*
+	@$(VLOG_COMPILE) -work $(word 2, $^) $< > tb_$*.mcomp
+	@cat $*.mcomp
+	@echo -e "Done compiling '$<' into work library '$(word 2, $^)'"
 
 ##############################################################################
-# General Simulation Targets
+# Simulation Targets
 ##############################################################################
 define CONSOLE_SIM_CMDS
 "run 15 us;	\
@@ -212,7 +244,7 @@ define CONSOLE_SIM_CMDS
 endef
 
 # This rule defines how to simulate the source form of the full design
-sim_full_source: $(addprefix $(S_WORK_LIB)/, $(notdir $(basename $(TOP_LEVEL_FILE) $(TEST_BENCH) $(TB_HELPER_FILES) $(COMPONENT_FILES))))
+sim_full_source: $(addprefix $(S_WORK_LIB)/, $(basename $(TOP_LEVEL_FILE) $(TEST_BENCH) $(TB_HELPER_FILES) $(COMPONENT_FILES)))
 	@echo -e "Simulating Source Design"
 # Uncomment below if you want to just run the simulation as a console command
 # using the commands listed in the CONSOLE_SIM_CMDS definition above instead of 
@@ -230,7 +262,7 @@ sim_full_source: $(addprefix $(S_WORK_LIB)/, $(notdir $(basename $(TOP_LEVEL_FIL
 	@echo -e "Done simulating the source design\n\n"
 
 # This rule defines how to simulate the mapped form of the full design
-sim_full_mapped: $(addprefix $(M_WORK_LIB)/, $(notdir $(basename $(TOP_LEVEL_FILE) $(TEST_BENCH) $(TB_HELPER_FILES))))
+sim_full_mapped: $(addprefix $(M_WORK_LIB)/, $(basename $(TOP_LEVEL_FILE) $(TEST_BENCH) $(TB_HELPER_FILES)))
 	@echo -e "Simulating Mapped Design"
 # Uncomment below if you want to just run the simulation as a console command
 # using the commands listed in the CONSOLE_SIM_CMDS definition above instead of 
@@ -251,12 +283,12 @@ sim_full_mapped: $(addprefix $(M_WORK_LIB)/, $(notdir $(basename $(TOP_LEVEL_FIL
 sim_%_source: $(S_WORK_LIB)/%
 	@$(SIMULATE) -i -t ps $(dir $<).$*
 	@cp -f transcript $*.stran
-
+	
 # Define a pattern rule for simulating the mapped version of individual files	without a testbench
 sim_%_mapped: $(M_WORK_LIB)/%
 	@$(SIMULATE) -i -t ps $(dir $<).$*
 	@cp -f transcript $*.mtran
-
+	
 # Define a pattern rule for simulating the source version of individual files	with a testbench
 tbsim_%_source: $(S_WORK_LIB)/% $(S_WORK_LIB)/tb_%
 	@$(SIMULATE) -i -t ps $(dir $<).tb_$*
@@ -297,13 +329,13 @@ MOD_NAME := $(basename $(MAIN_FILE))
 # clock signal name for sequential/clocked designs.
 # Also have to specify to run with the c shell to force it to use the course config (.cshrc) and call course scripts 
 mapped/$(TOP_MODULE).v: SHELL := /usr/local/bin/tcsh
-$(addsuffix .v, $(addprefix mapped/, $(TOP_MODULE))): mapped/%.v : source/%.sv $(addprefix source/,$(COMPONENT_FILES))
+mapped/$(TOP_MODULE).v: source/$(TOP_LEVEL_FILE) $(addprefix source/,$(COMPONENT_FILES))
 	@echo "Synthesizing design: $@\n"
-	@$(MAKE) --no-print-directory syn_mapped MAIN_FILE='$(notdir $<)' DEP_SUB_FILES='$(COMPONENT_FILES)' CLOCK_NAME='$(CLOCK_NAME)' CLOCK_PERIOD='$(CLOCK_PERIOD)' > $(notdir $(basename $@)).log
+	@$(MAKE) --no-print-directory syn_mapped MAIN_FILE='$(TOP_LEVEL_FILE)' DEP_SUB_FILES='$(COMPONENT_FILES)' CLOCK_NAME='clk' CLOCK_PERIOD='2' > $(TOP_MODULE).log
 	@echo "Synthesis run attempt for $@ complete"
 	@echo "Checking synthesis attempt for errors"
-	@syschk -w $(notdir $(basename $@))
-	@echo "\nCheck for synthesis attempt errors complete, open $(notdir $(basename $@)).log for details if errors were found"
+	@syschk -w $(TOP_MODULE)
+	@echo "\nCheck for synthesis attempt errors complete, open $(TOP_MODULE).log for details if errors were found"
 	@echo "\nRemember to check $(TOP_MODULE).log for latches and timing arcs"
 	@echo "Synthesis run complete for design: $@\n\n"
 
@@ -328,43 +360,40 @@ mapped/%.v: source/%.sv $(addprefix source/,$(DEP_SUB_FILES))
 ##############################################################################
 # Define the synthesis commands to use
 ##############################################################################
-define newline
-
-
-endef
-
+	
 define SYN_CMDS
-# Step 1:  Read in the source file
-analyze -format sverilog -lib WORK {$(DEP_SUB_FILES) $(MAIN_FILE)}
-elaborate $(MOD_NAME) -lib WORK
-uniquify
-# Step 2: Set design constraints
-# Uncomment below to set timing, area, power, etc. constraints
-# set_max_delay <delay> -from "<input>" -to "<output>"
-# set_max_area <area>
-# set_max_total_power <power> mW
-$(if $(and $(CLOCK_NAME), $(CLOCK_PERIOD)), create_clock "$(CLOCK_NAME)" -name "$(CLOCK_NAME)" -period $(CLOCK_PERIOD))
-
-# Step 3: Compile the design
-compile -map_effort medium
-
-# Step 4: Output reports
-report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/$(MOD_NAME).rep
-report_area >> reports/$(MOD_NAME).rep
-report_power -hier >> reports/$(MOD_NAME).rep
-
-# Step 5: Output final VHDL and Verilog files
-write_file -format verilog -hierarchy -output "mapped/$(MOD_NAME).v"
-echo "\nScript Done\n"
-echo "\nChecking Design\n"
-check_design
-quit
+'# Step 1:  Read in the source file                                                     \n\
+analyze -format sverilog -lib WORK {$(DEP_SUB_FILES) $(MAIN_FILE)}        						  \n\
+elaborate $(MOD_NAME) -lib WORK -update                       										  		\n\
+                                                                                        \n\
+uniquify                                                                                \n\
+# Step 2: Set design constraints                                                        \n\
+# Uncomment below to set timing, area, power, etc. constraints                          \n\
+# set_max_delay <delay> -from "<input>" -to "<output>"                                  \n\
+# set_max_area <area>                                                                   \n\
+# set_max_total_power <power> mW                                                        \n\
+$(if $(and $(CLOCK_NAME), $(CLOCK_PERIOD)), create_clock "$(CLOCK_NAME)" -name "$(CLOCK_NAME)" -period $(CLOCK_PERIOD)) \n\
+                                                                                        \n\
+# Step 3: Compile the design                                                            \n\
+compile -map_effort medium                                                              \n\
+                                                                                        \n\
+# Step 4: Output reports                                                                \n\
+report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/$(MOD_NAME).rep    \n\
+report_area >> reports/$(MOD_NAME).rep                                                  \n\
+report_power -hier >> reports/$(MOD_NAME).rep                                           \n\
+                                                                                        \n\
+# Step 5: Output final VHDL and Verilog files                                           \n\
+write -format verilog -hierarchy -output "mapped/$(MOD_NAME).v"                         \n\
+echo "\\nScript Done\\n"                                                                \n\
+echo "\\nChecking Design\\n"                                                            \n\
+check_design                                                                            \n\
+exit'
 endef
 
-# Define the target that will actually invoke the synthesis commands through design compiler
-syn_mapped do_mapping.tcl:
+# Define the target that will actuall invoke the synthesis commands through design compiler
+# Use of the .ONESHELL will cause all of the lines after the DC_SHELL invocation line to be
+# run on the design compiler shell instance created by the DC_SHELL invocation line.
+syn_mapped:
 	@echo -e "Synthesizing design: $(MAIN_FILE)"
-	@echo -e '$(subst $(newline),\n,$(subst \n,\\n,${SYN_CMDS}))' > do_mapping.tcl
-	$(DC_SHELL) -x "source -echo do_mapping.tcl"
+	@echo -e $(SYN_CMDS) | $(DC_SHELL)
 	@echo -e "Done\n\n"
-

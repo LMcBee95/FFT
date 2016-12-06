@@ -1,0 +1,6 @@
+<address>:<data value in hexidecimal>;
+0:FF;
+1:AF;
+4:FF;
+16:AC;
+17:FF;

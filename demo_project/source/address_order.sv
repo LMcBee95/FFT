@@ -14,7 +14,7 @@ module address_order (
 	input reg [9:0] b_imag,
 	input reg [2:0] samples_loaded_count,
 	
-	output reg [9:0] output_address
+	output reg [8:0] output_address
 );
 //State encoding
 localparam	load_real_a = 0,

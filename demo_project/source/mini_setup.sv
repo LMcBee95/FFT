@@ -9,11 +9,31 @@ module mini_setup (
 	input wire clk,
 	input wire n_rst,
 	input reg fft_start,
-	input wire [511:0] [15:0] main_data,
+	//input wire [511:0] [15:0] main_data,
 
-	output reg fft_done,
-	output reg [511:0] [15:0] all_data
+	output reg sram_read_ena,
+	output reg sram_write_ena,
+	output reg [15:0] pts_serial_out,
+	output reg [8:0]output_address,
+	input reg [15:0] sample,
+	output reg fft_done
+
+	//output reg [511:0] [15:0] all_data
 );
+
+/*
+mem_buff MEMORYBUFFER (
+	.fft_start(fft_start),
+	.sram_read_ena(sram_read_ena),
+	.sram_write_ena(sram_write_ena),
+	.write_data(pts_serial_out),
+	.address(output_address),
+	.main_data(main_data),
+	.sample(sample),
+	.all_data(all_data)
+
+);
+*/
 
 reg [3:0] stage_count;
 reg k_ena;
@@ -36,20 +56,14 @@ reg [2:0] samples_written_count;
 reg iteration_done;
 reg samples_loaded_done;
 reg samples_written_done;
-reg sram_read_ena;
-reg sram_write_ena;
 reg iteration_ena;
-reg [9:0] output_address;
 reg [6:0] twiddle_index;
 reg [15:0] twiddle_real;
 reg [15:0] twiddle_imag;
-reg [15:0] sample; //from SRAM (does nothing right now)
 reg [15:0] output_value; //value to be sent to input shift buffer (does nothing right now)
 
 reg [47:0] [15:0] data_par_in; //Input parallel data to the butterfly block
 reg [31:0] [15:0] data_par_out; //Output parallel data from the butterfly block
-reg [15:0] pts_serial_out; //Serial data from the parralel to serial converter
-reg [15:0] stp_serial_in; //Serial data going into the serial to parallel converter
 
 twiddle_index2 TWIDDLEINDEX (
 	.clk(clk),
@@ -135,8 +149,8 @@ twiddleRom TWIDDLEROM (
 );
 
 load_controller LOADCONTROLLER (
-	.twiddle_real(16'b1),//twiddle_real),
-	.twiddle_imag(16'b1),//twiddle_imag),
+	.twiddle_real(twiddle_real),
+	.twiddle_imag(twiddle_imag),
 	.sample(sample),
 	.samples_loaded_count(samples_loaded_count),
 	.output_value(output_value)
@@ -166,17 +180,7 @@ ptsWrapper PTSWRAPPER (
 );
 
 
-mem_buff MEMORYBUFFER (
-	.fft_start(fft_start),
-	.sram_read_ena(sram_read_ena),
-	.sram_write_ena(sram_write_ena),
-	.write_data(pts_serial_out),
-	.address(output_address),
-	.main_data(main_data),
-	.sample(sample),
-	.all_data(all_data)
 
-);
 
 
 endmodule

@@ -11,7 +11,7 @@ module tb_stpWrapper();
 	reg tb_n_reset;
 	reg tb_it_cnt_strobe;
 	reg [15:0] tb_serial_in;
-	reg [47:0][15:0] tb_data_par_in;
+	reg [47:0][15:0] tb_data_par;
 
 	task load_register;
 		input logic strobe;
@@ -56,7 +56,7 @@ module tb_stpWrapper();
 		.n_rst(tb_n_reset), //asynch, active-low
 		.it_cnt_strobe(tb_it_cnt_strobe), //active-high
 		.serial_in(tb_serial_in), //serial input, value to be shifted into reg, default = 1
-		.data_par_in(tb_data_par_in)
+		.data_par(tb_data_par)
 	);	
 	
 	// Test bench process
@@ -81,28 +81,7 @@ module tb_stpWrapper();
 		for(int i = 0; i < 48; i++)
 		begin
 			@(negedge tb_clk);
-			$info("%h", tb_data_par_in[i]);
-		end
-
-		//#Test 1: Loading values 47-0
-		@(negedge tb_clk);
-		load_register(0,16'h0);
-		
-		for(int i = 0; i < 48; i++)
-		begin
-			@(negedge tb_clk);
-			load_register(1,(47-i)%17);
-		end
-		
-		@(negedge tb_clk);
-		load_register(0,16'h0);
-		
-		#(1);
-		$info("Output: ",);
-		for(int i = 0; i < 48; i++)
-		begin
-			@(negedge tb_clk);
-			$info("%h", tb_data_par_in[i]);
+			$info("%h", tb_data_par[i]);
 		end
 	end
 endmodule
