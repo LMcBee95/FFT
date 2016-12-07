@@ -6,7 +6,7 @@ module fixed_point_math
 (
 	input wire [15:0] input1,
 	input wire [15:0] input2,
-	output wire [15:0] product
+	output reg [15:0] product
 
 );
 

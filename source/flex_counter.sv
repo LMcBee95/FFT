@@ -1,72 +1,80 @@
 // $Id: $
 // File name:   flex_counter.sv
-// Created:     9/10/2016
-// Author:      Luke McBee
-// Lab Section: 4
+// Created:     9/13/2016
+// Author:      Erin Hill
+// Lab Section: 337-04
 // Version:     1.0  Initial Design Entry
-// Description: flexing counter block thing
-
+// Description: Flexible Counter Specifications
 module flex_counter
 #(
-	NUM_CNT_BITS = 10
+	parameter NUM_CNT_BITS = 4
 )
-
 (
 	input wire clk,
 	input wire n_rst,
 	input wire clear,
 	input wire count_enable,
-	input wire [NUM_CNT_BITS - 1:0] rollover_val,
-	output reg [NUM_CNT_BITS - 1:0] count_out,
+	input wire [(NUM_CNT_BITS - 1):0] rollover_val,
+	output reg [(NUM_CNT_BITS - 1):0] count_out,
 	output reg rollover_flag
 );
+reg [(NUM_CNT_BITS - 1):0] count_next = {NUM_CNT_BITS{1'b0}};
+reg rf_load = 1'b0;
+//initial count_next[(NUM_CNT_BITS - 1):0] = {NUM_CNT_BITS{1'b0}};
+//initial rf_load = 1'b0;
 
-	reg [NUM_CNT_BITS - 1:0] next_cnt;
-	reg next_rollover;
+
+always_comb
+begin
+	//count_next[(NUM_CNT_BITS - 1):0] = {NUM_CNT_BITS{1'b0}};
+	//rf_load = 1'b0;
+
+	if(clear == 1'b1)
+	begin
+		count_next[(NUM_CNT_BITS - 1):0] = {NUM_CNT_BITS{1'b0}};
+	end
+	else if (count_enable == 1'b1)
+	begin
+		//if count out is still less than rollover
+		if(count_out < rollover_val)
+		begin
+			count_next = count_out + 1'b1;
+		end
+		else //adding 1 will go above rolleover value 
+		begin
+			//rf_load = 1;
+			count_next = 4'b0001;
+		end
+	end
+	else
+	begin
+		count_next = count_out;
+	end
+	
+	if(count_next >= rollover_val)
+	begin
+		rf_load = 1'b1; //----------
+	end
+	else
+	begin
+		rf_load = 1'b0; //-----------
+	end
+
+end //end always_comb
 
 always_ff @ (posedge clk, negedge n_rst)
 begin
-	//reset	
-	if(n_rst == 1'b0) begin
-		count_out <= 0;
-		rollover_flag <= 0;
+	if(n_rst == 0)
+	begin
+		count_out <= {NUM_CNT_BITS{1'b0}};
+		//count_next <= {NUM_CNT_BITS{1'B0}};
+		rollover_flag <= 1'b0;
 	end
-	else begin
-		rollover_flag <= next_rollover;	
-		count_out <= next_cnt;	
-	end
-end
-
-always_comb begin
-	
-	if(clear == 1) begin
-		next_cnt = 0;				
-		next_rollover = 0;
-	end
-	else if(count_enable == 1'b1) begin
-		
-		if(count_out >= rollover_val) begin
-			next_cnt = 1;
-		end
-		else begin
-			next_cnt = count_out + 1;
-		end
-
-		
-		
-		if(count_out == rollover_val - 1) begin	
-			next_rollover = 1;
-		end
-		else begin
-			next_rollover = 0;
-		end
-	end
-	else begin
-		next_rollover = rollover_flag;
-		next_cnt = count_out;
-	end	
-end
-
-
+	else
+	begin
+		count_out <= count_next;
+		rollover_flag <= rf_load;
+	end //else not reset end
+end //end always_ff
 
 endmodule

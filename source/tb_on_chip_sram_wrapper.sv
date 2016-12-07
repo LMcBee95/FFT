@@ -11,9 +11,9 @@
 module tb_on_chip_sram_wrapper ();
 	// SRAM configuation parameters (based on values set in wrapper file)
 	localparam TB_CLK_PERIOD			= 6.0;	// Read/Write delays are 5ns and need ~1 ns for wire propagation
-	localparam TB_ADDR_SIZE_BITS	= 16; 	// 16 => 64K Words in Memory
+	localparam TB_ADDR_SIZE_BITS	= 9; 	// 16 => 64K Words in Memory
 	localparam TB_DATA_SIZE_WORDS	= 1;		// Single word access (only a demo case, can access arbitraliy many bytes during an access but all accesses must be the number of words wide)
-	localparam TB_WORD_SIZE_BYTES	= 1;		// Single byte words (only a demo case, words can be as large as 3 bytes)
+	localparam TB_WORD_SIZE_BYTES	= 2;		// Single byte words (only a demo case, words can be as large as 3 bytes)
 	localparam TB_ACCES_SIZE_BITS	= (TB_DATA_SIZE_WORDS * TB_WORD_SIZE_BYTES * 8);
 	
 	// Useful test bench constants
@@ -97,9 +97,9 @@ module tb_on_chip_sram_wrapper ();
 		tb_write_data		<= TB_MAX_ACC;
 		#TB_CLK_PERIOD;
 		
-		tb_address 			<= 8;
+		tb_address 			<= 0;
 		tb_write_enable	<= 1;
-		tb_write_data		<= 5;
+		tb_write_data		<= 100;
 		#TB_CLK_PERIOD;
 		
 		tb_write_enable	<= 0;
@@ -149,7 +149,7 @@ module tb_on_chip_sram_wrapper ();
 		tb_mem_clr <= 0;
 		#TB_CLK_PERIOD;
 		
-		// Test Memory Initialization feature
+		/*// Test Memory Initialization feature
 		$info("Testing Memory Initialziation Feature");
 		tb_mem_init					<= 1;
 		tb_init_file_number	<= 0;
@@ -183,7 +183,7 @@ module tb_on_chip_sram_wrapper ();
 		
 		tb_read_enable	<= 1;
 		tb_address			<= 1024;
-		#TB_CLK_PERIOD;
+		#TB_CLK_PERIOD;*/
 		
 	end
 	

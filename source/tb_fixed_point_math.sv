@@ -1,5 +1,5 @@
 
-
+`timescale 1ns / 100ps
 module tb_fixed_point_math();
 
 
