@@ -192,7 +192,16 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 #10;
 	end
 //Write to start the process
-	$info("Testing Memory Initialziation Feature");
+		$info("Dumping Avalon Input");
+		tb_mem_dump					<= 1;
+		tb_dump_file_number	<=	0;
+		tb_start_address		<= 0;
+		tb_last_address			<= TB_MAX_ADDRESS;
+		#CLK_PERIOD;
+		
+		tb_mem_dump	<= 0;
+#10;
+	$info("Initalizing the SRAM to file input");
 	tb_mem_init					<= 1;
 	tb_init_file_number	<= 0;
 	#CLK_PERIOD;
@@ -225,9 +234,9 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 
 	end
 
-		$info("Testing Memory Dump Feature");
+		$info("Dumping FFT processed Data");
 		tb_mem_dump					<= 1;
-		tb_dump_file_number	<=	0;
+		tb_dump_file_number	<=	1;
 		tb_start_address		<= 0;
 		tb_last_address			<= TB_MAX_ADDRESS;
 		#CLK_PERIOD;
