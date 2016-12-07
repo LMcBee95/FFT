@@ -1,9 +1,9 @@
 QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
-Start time: 17:06:05 on Dec 07,2016
+Start time: 18:32:25 on Dec 07,2016
 vlog -sv -work source_work source/fixed_point_math.sv 
 -- Compiling module fixed_point_math
 
 Top level modules:
 	fixed_point_math
-End time: 17:06:05 on Dec 07,2016, Elapsed time: 0:00:00
+End time: 18:32:26 on Dec 07,2016, Elapsed time: 0:00:01
 Errors: 0, Warnings: 0
