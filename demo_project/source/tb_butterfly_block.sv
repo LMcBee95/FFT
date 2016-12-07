@@ -14,6 +14,8 @@ module tb_butterfly_block();
 	localparam CHECK_DELAY	= 1ns;
 	localparam CLK_PERIOD	= 10ns;
 
+	integer tb_test_case;
+
 	// Test bench dut port signals
 	reg [15:0] tb_input_1_real;
 	reg [15:0] tb_input_1_imaginary;
@@ -67,11 +69,16 @@ module tb_butterfly_block();
 	// Test bench process
 	initial
 	begin
+		tb_test_case =0;
+		for(tb_test_case = 0; tb_test_case < 10;tb_test_case = tb_test_case+1)
+	begin
+		$info("input values: %d + i%d and %d + i%d",tb	
 		load_butterfly(5, 4, 3, 2, 2 , 1);
 
 		#(1);
 
 		$info("Real 1 = %d | Imag 1 = %d | Real 2 = %d | Imag 2 = %d", tb_output_1_real, tb_output_1_imaginary, tb_output_2_real, tb_output_2_imaginary);
+	end
 
 	end
 
