@@ -9,7 +9,7 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -i -t ps source_work.tb_custom_master_slave 
-# Start time: 13:35:20 on Dec 07,2016
+# Start time: 16:43:52 on Dec 07,2016
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading sv_std.std
 # Loading work.tb_custom_master_slave(fast)
@@ -21,6 +21,16 @@
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.simple_scale_mem(scaleable_memory)#1
-# This test bench has run to completion
-# End time: 13:35:32 on Dec 07,2016, Elapsed time: 0:00:12
-# Errors: 0, Warnings: 0
+add wave -position end sim:/tb_custom_master_slave/sram/*
+run 450000 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_custom_master_slave/sram/MEM
+# ** Info: Dumping Avalon Input
+#    Time: 20420 ns  Scope: tb_custom_master_slave File: source/tb_custom_master_slave.sv Line: 195
+# ** Info: Initalizing the SRAM to file input
+#    Time: 20440 ns  Scope: tb_custom_master_slave File: source/tb_custom_master_slave.sv Line: 204
+# ** Info: Dumping FFT processed Data
+#    Time: 439065 ns  Scope: tb_custom_master_slave File: source/tb_custom_master_slave.sv Line: 237
+# This test bench was not run long enough to execute all test cases. Please run this test bench for at least a total of ns
+# End time: 16:45:37 on Dec 07,2016, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 1

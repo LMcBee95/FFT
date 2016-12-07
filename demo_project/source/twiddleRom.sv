@@ -1,7 +1,7 @@
 module twiddle_rom(
      input wire [6:0] twiddle_index,
-     output wire [15:0] twiddle_real,
-     output wire [15:0] twiddle_img
+     output reg [15:0] twiddle_real,
+     output reg [15:0] twiddle_img
 );
 always_comb begin
      case(twiddle_index)

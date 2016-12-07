@@ -1,9 +1,9 @@
 QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
-Start time: 13:35:15 on Dec 07,2016
+Start time: 16:43:47 on Dec 07,2016
 vlog -sv -work source_work source/ptsWrapper.sv 
 -- Compiling module ptsWrapper
 
 Top level modules:
 	ptsWrapper
-End time: 13:35:15 on Dec 07,2016, Elapsed time: 0:00:00
+End time: 16:43:47 on Dec 07,2016, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
