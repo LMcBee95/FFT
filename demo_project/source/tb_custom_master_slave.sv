@@ -169,11 +169,19 @@ tb_test_master_readdatavalid = '0;
 	tb_test_slave_writedata = 16'hffff;
 	tb_test_slave_chipselect = 1'b1;
 #10
-	for(tb_test_case =0; tb_test_case < 256;tb_test_case = tb_test_case +1)
+	for(tb_test_case =0; tb_test_case < 512;tb_test_case = tb_test_case +1)
 	begin
 	tb_test_slave_write = 1'b1;
 	tb_test_slave_address =tb_test_case;
-	tb_test_slave_writedata = 16'b0000000100000000;
+
+	if(tb_test_case < 256)
+	begin
+		tb_test_slave_writedata = 16'b0000000100000000;
+	end
+	else
+	begin
+		tb_test_slave_writedata = 16'b0000000000000000;
+	end
 	tb_test_slave_chipselect = 1'b1;
 #30;
 	tb_test_slave_write = 1'b0;

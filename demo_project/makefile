@@ -15,7 +15,7 @@ include /home/ecegrid/a/ece337/Course_Prod/course_make_vars
 # (do not include the source folder in the name)
 # NOTE: YOU WILL NEED TO SET THIS VARIABLE'S VALUE WHEN WORKING WITH HEIRARCHICAL DESIGNS
 # AND THE AUTOMATED GRADING SYSTEM
-COMPONENT_FILES	:= flex_counter.sv twiddle_index2.sv address_output.sv address_order.sv timers.sv mcu2.sv twiddleRom.sv load_controller.sv fixed_point_math.sv ptsWrapper.sv stpWrapper.sv butterfly_block.sv ButterflyWrapper.sv mem_buff.sv mini_setup.sv
+COMPONENT_FILES	:= flex_counter.sv twiddle_index2.sv address_output.sv address_order.sv timers.sv mcu2.sv twiddleRom.sv load_controller.sv fixed_point_math.sv ptsWrapper.sv stpWrapper.sv butterfly_block.sv ButterflyWrapper.sv mem_buff.sv mini_setup.sv fixed_point_add.sv
 
 # Specify the name of the top level file (do not include the source folder in the name)
 # NOTE: YOU WILL NEED TO SET THIS VARIABLE'S VALUE WHEN WORKING WITH HEIRARCHICAL DESIGNS

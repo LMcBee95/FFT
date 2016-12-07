@@ -10,8 +10,8 @@ module ButterflyWrapper
 		.input_1_imaginary(data_par_in[1]),
 		.input_2_real(data_par_in[2]),
 		.input_2_imaginary(data_par_in[3]),
-		.twiddle_real(data_par_in[32]),
-		.twiddle_imaginary(data_par_in[33]),
+		.twiddle_real(data_par_in[4]),
+		.twiddle_imaginary(data_par_in[5]),
 		.output_1_real(data_par_out[0]),
 		.output_1_imaginary(data_par_out[1]),
 		.output_2_real(data_par_out[2]),
@@ -19,12 +19,12 @@ module ButterflyWrapper
 	);
 
 	butterfly_block b2 (
-		.input_1_real(data_par_in[4]),
-		.input_1_imaginary(data_par_in[5]),
-		.input_2_real(data_par_in[6]),
-		.input_2_imaginary(data_par_in[7]),
-		.twiddle_real(data_par_in[34]),
-		.twiddle_imaginary(data_par_in[35]),
+		.input_1_real(data_par_in[6]),
+		.input_1_imaginary(data_par_in[7]),
+		.input_2_real(data_par_in[8]),
+		.input_2_imaginary(data_par_in[9]),
+		.twiddle_real(data_par_in[10]),
+		.twiddle_imaginary(data_par_in[11]),
 		.output_1_real(data_par_out[4]),
 		.output_1_imaginary(data_par_out[5]),
 		.output_2_real(data_par_out[6]),
@@ -32,12 +32,12 @@ module ButterflyWrapper
 	);
 
 	butterfly_block b3 (
-		.input_1_real(data_par_in[8]),
-		.input_1_imaginary(data_par_in[9]),
-		.input_2_real(data_par_in[10]),
-		.input_2_imaginary(data_par_in[11]),
-		.twiddle_real(data_par_in[36]),
-		.twiddle_imaginary(data_par_in[37]),
+		.input_1_real(data_par_in[12]),
+		.input_1_imaginary(data_par_in[13]),
+		.input_2_real(data_par_in[14]),
+		.input_2_imaginary(data_par_in[15]),
+		.twiddle_real(data_par_in[16]),
+		.twiddle_imaginary(data_par_in[17]),
 		.output_1_real(data_par_out[8]),
 		.output_1_imaginary(data_par_out[9]),
 		.output_2_real(data_par_out[10]),
@@ -45,12 +45,12 @@ module ButterflyWrapper
 	);
 
 	butterfly_block b4 (
-		.input_1_real(data_par_in[12]),
-		.input_1_imaginary(data_par_in[13]),
-		.input_2_real(data_par_in[14]),
-		.input_2_imaginary(data_par_in[15]),
-		.twiddle_real(data_par_in[38]),
-		.twiddle_imaginary(data_par_in[39]),
+		.input_1_real(data_par_in[18]),
+		.input_1_imaginary(data_par_in[19]),
+		.input_2_real(data_par_in[20]),
+		.input_2_imaginary(data_par_in[21]),
+		.twiddle_real(data_par_in[22]),
+		.twiddle_imaginary(data_par_in[23]),
 		.output_1_real(data_par_out[12]),
 		.output_1_imaginary(data_par_out[13]),
 		.output_2_real(data_par_out[14]),
@@ -58,12 +58,12 @@ module ButterflyWrapper
 	);
 
 	butterfly_block b5 (
-		.input_1_real(data_par_in[16]),
-		.input_1_imaginary(data_par_in[17]),
-		.input_2_real(data_par_in[18]),
-		.input_2_imaginary(data_par_in[19]),
-		.twiddle_real(data_par_in[40]),
-		.twiddle_imaginary(data_par_in[41]),
+		.input_1_real(data_par_in[24]),
+		.input_1_imaginary(data_par_in[25]),
+		.input_2_real(data_par_in[26]),
+		.input_2_imaginary(data_par_in[27]),
+		.twiddle_real(data_par_in[28]),
+		.twiddle_imaginary(data_par_in[29]),
 		.output_1_real(data_par_out[16]),
 		.output_1_imaginary(data_par_out[17]),
 		.output_2_real(data_par_out[18]),
@@ -71,12 +71,12 @@ module ButterflyWrapper
 	);
 
 	butterfly_block b6 (
-		.input_1_real(data_par_in[20]),
-		.input_1_imaginary(data_par_in[21]),
-		.input_2_real(data_par_in[22]),
-		.input_2_imaginary(data_par_in[23]),
-		.twiddle_real(data_par_in[42]),
-		.twiddle_imaginary(data_par_in[43]),
+		.input_1_real(data_par_in[30]),
+		.input_1_imaginary(data_par_in[31]),
+		.input_2_real(data_par_in[32]),
+		.input_2_imaginary(data_par_in[33]),
+		.twiddle_real(data_par_in[34]),
+		.twiddle_imaginary(data_par_in[35]),
 		.output_1_real(data_par_out[20]),
 		.output_1_imaginary(data_par_out[21]),
 		.output_2_real(data_par_out[22]),
@@ -84,12 +84,12 @@ module ButterflyWrapper
 	);
 	
 	butterfly_block b7 (
-		.input_1_real(data_par_in[24]),
-		.input_1_imaginary(data_par_in[25]),
-		.input_2_real(data_par_in[26]),
-		.input_2_imaginary(data_par_in[27]),
-		.twiddle_real(data_par_in[44]),
-		.twiddle_imaginary(data_par_in[45]),
+		.input_1_real(data_par_in[36]),
+		.input_1_imaginary(data_par_in[37]),
+		.input_2_real(data_par_in[38]),
+		.input_2_imaginary(data_par_in[39]),
+		.twiddle_real(data_par_in[40]),
+		.twiddle_imaginary(data_par_in[41]),
 		.output_1_real(data_par_out[24]),
 		.output_1_imaginary(data_par_out[25]),
 		.output_2_real(data_par_out[26]),
@@ -97,10 +97,10 @@ module ButterflyWrapper
 	);
 
 	butterfly_block b8 (
-		.input_1_real(data_par_in[28]),
-		.input_1_imaginary(data_par_in[29]),
-		.input_2_real(data_par_in[30]),
-		.input_2_imaginary(data_par_in[31]),
+		.input_1_real(data_par_in[42]),
+		.input_1_imaginary(data_par_in[43]),
+		.input_2_real(data_par_in[44]),
+		.input_2_imaginary(data_par_in[45]),
 		.twiddle_real(data_par_in[46]),
 		.twiddle_imaginary(data_par_in[47]),
 		.output_1_real(data_par_out[28]),
