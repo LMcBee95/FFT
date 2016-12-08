@@ -177,7 +177,7 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 
 	if(tb_test_case < 256)
 	begin
-		tb_test_slave_writedata = 16'b0000000100000000;
+		tb_test_slave_writedata = tb_test_case;
 	end
 	else
 	begin
@@ -234,7 +234,7 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 
 	end
 
-		$info("Dumping Complete Data");
+		$info("Dumping FFT processed Data");
 		tb_mem_dump					<= 1;
 		tb_dump_file_number	<=	1;
 		tb_start_address		<= 0;

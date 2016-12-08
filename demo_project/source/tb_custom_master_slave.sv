@@ -177,7 +177,7 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 
 	if(tb_test_case < 256)
 	begin
-		tb_test_slave_writedata = 16'b0000000100000000;
+		tb_test_slave_writedata = tb_test_case;
 	end
 	else
 	begin

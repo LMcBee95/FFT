@@ -9,14 +9,13 @@ z2
 cModel Technology
 Z0 d/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project
 T_opt
-!s110 1481134802
-Vl`_d_n>2<SA0zN=hCQCQ30
+!s110 1481160027
+VI^dFUUig=]gcdeD8`:9eh2
 Z1 04 22 4 work tb_custom_master_slave fast 0
-=1-782bcb3383d2-584852d1-8e703-2053
+=7-002219a71b2e-5848b55b-81e47-6660
 Z2 o-quiet -auto_acc_if_foreign -work source_work -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim
 n@_opt
 Z3 OL;O;10.3b;59
-R0
 T_opt1
 !s110 1481082988
 VJAYNeNebR]KB<CER[=M3f0
@@ -134,25 +133,25 @@ R9
 n@butterfly@wrapper
 vcustom_master_slave
 R4
-Z12 !s110 1481153544
+!s110 1481160010
 !i10b 1
 !s100 125SFh90WV0zS<9dPDFo60
-IaaQGo7:YNF:G2bEO`Q5hg2
+I_jd2BH:6:LaN5b6hV?2M31
 R6
 !s105 custom_master_slave_sv_unit
 S1
 R0
 w1481058622
-8source/custom_master_slave.sv
-Fsource/custom_master_slave.sv
+8/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/custom_master_slave.sv
+F/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/custom_master_slave.sv
 L0 3
 R7
 r1
 !s85 0
 31
-!s108 1481153544.607602
-!s107 source/custom_master_slave.sv|
-!s90 -sv|-work|source_work|source/custom_master_slave.sv|
+!s108 1481160010.647235
+!s107 /home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/custom_master_slave.sv|
+!s90 -reportprogress|300|-sv|-work|source_work|/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/custom_master_slave.sv|
 !i113 0
 R8
 R9
@@ -190,7 +189,7 @@ R6
 !s105 fixed_point_math_sv_unit
 S1
 R0
-Z13 w1480877937
+Z12 w1480877937
 8source/fixed_point_math.sv
 Fsource/fixed_point_math.sv
 L0 5
@@ -214,7 +213,7 @@ R6
 !s105 flex_counter_sv_unit
 S1
 R0
-R13
+R12
 8source/flex_counter.sv
 Fsource/flex_counter.sv
 L0 8
@@ -238,7 +237,7 @@ R6
 !s105 load_controller_sv_unit
 S1
 R0
-R13
+R12
 8source/load_controller.sv
 Fsource/load_controller.sv
 L0 8
@@ -254,25 +253,25 @@ R8
 R9
 vmcu2
 R4
-R5
+!s110 1481156337
 !i10b 1
-!s100 H9RGC6?U@=WV60_[nHFXi1
-IVP^h>IF:VQnT6UA>[Z7Ao1
+!s100 Dbdgz@IeE_cE87a0E;eX43
+IO6W51Dd5BaKZR5iE>Cn6:0
 R6
 !s105 mcu2_sv_unit
 S1
 R0
-R13
-8source/mcu2.sv
-Fsource/mcu2.sv
+w1481156304
+8/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/mcu2.sv
+F/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/mcu2.sv
 L0 8
 R7
 r1
 !s85 0
 31
-!s108 1481153545.645026
-!s107 source/mcu2.sv|
-!s90 -sv|-work|source_work|source/mcu2.sv|
+!s108 1481156336.996605
+!s107 /home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/mcu2.sv|
+!s90 -reportprogress|300|-sv|-work|source_work|/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/mcu2.sv|
 !i113 0
 R8
 R9
@@ -286,7 +285,7 @@ R6
 !s105 mem_buff_sv_unit
 S1
 R0
-R13
+R12
 8source/mem_buff.sv
 Fsource/mem_buff.sv
 L0 5
@@ -325,46 +324,46 @@ r1
 R8
 R9
 Eon_chip_sram_wrapper
-Z14 w1481135390
-Z15 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z17 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z13 w1481135390
+Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z15 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z16 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z18 8source/on_chip_sram_wrapper.vhd
-Z19 Fsource/on_chip_sram_wrapper.vhd
+Z17 8source/on_chip_sram_wrapper.vhd
+Z18 Fsource/on_chip_sram_wrapper.vhd
 l0
 L17
 VI6fo1ThGGB2_LohMDZcL?1
 !s100 `jRUa^?aV_b6n;LU?g<b_2
-Z20 OL;C;10.3b;59
+Z19 OL;C;10.3b;59
 31
 R5
 !i10b 1
-Z21 !s108 1481153544.966944
-Z22 !s90 -work|source_work|source/on_chip_sram_wrapper.vhd|
-Z23 !s107 source/on_chip_sram_wrapper.vhd|
+Z20 !s108 1481153544.966944
+Z21 !s90 -work|source_work|source/on_chip_sram_wrapper.vhd|
+Z22 !s107 source/on_chip_sram_wrapper.vhd|
 !i113 0
-Z24 o-work source_work
-Z25 tExplicit 1 Coverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0
+Z23 o-work source_work
+Z24 tExplicit 1 Coverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0
 Awrapper
+R14
 R15
 R16
-R17
 DEx4 work 20 on_chip_sram_wrapper 0 22 I6fo1ThGGB2_LohMDZcL?1
 l124
 L58
 VA[V39a^J22f4d]7bhmRii2
 !s100 HGf=dX^b=izdn0eTLVaF51
-R20
+R19
 31
 R5
 !i10b 1
+R20
 R21
 R22
-R23
 !i113 0
+R23
 R24
-R25
 vptsWrapper
 R4
 R10
@@ -375,7 +374,7 @@ R6
 !s105 ptsWrapper_sv_unit
 S1
 R0
-R13
+R12
 8source/ptsWrapper.sv
 Fsource/ptsWrapper.sv
 L0 1
@@ -400,7 +399,7 @@ R6
 !s105 stpWrapper_sv_unit
 S1
 R0
-R13
+R12
 8source/stpWrapper.sv
 Fsource/stpWrapper.sv
 L0 1
@@ -442,25 +441,25 @@ R9
 ntb_@butterfly@wrapper
 vtb_custom_master_slave
 R4
-R12
+!s110 1481160023
 !i10b 1
-!s100 YlidHPUWal1z<of4P3AEo1
-I;Z^l_4Q26LU^VEWW_1MnL0
+!s100 TA2XkW:EOc9^PA5QTC;^M2
+I5:4I]GT;8J5IH:2b?gY@i2
 R6
 !s105 tb_custom_master_slave_sv_unit
 S1
 R0
-w1481147669
-8source/tb_custom_master_slave.sv
-Fsource/tb_custom_master_slave.sv
+w1481159997
+8/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/tb_custom_master_slave.sv
+F/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/tb_custom_master_slave.sv
 L0 6
 R7
 r1
 !s85 0
 31
-!s108 1481153544.741342
-!s107 source/tb_custom_master_slave.sv|
-!s90 -sv|-work|source_work|source/tb_custom_master_slave.sv|
+!s108 1481160023.396770
+!s107 /home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/tb_custom_master_slave.sv|
+!s90 -reportprogress|300|-sv|-work|source_work|/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/tb_custom_master_slave.sv|
 !i113 0
 R8
 R9
@@ -498,7 +497,7 @@ R6
 !s105 timers_sv_unit
 S1
 R0
-R13
+R12
 8source/timers.sv
 Fsource/timers.sv
 L0 8
@@ -522,7 +521,7 @@ R6
 !s105 twiddle_index2_sv_unit
 S1
 R0
-R13
+R12
 8source/twiddle_index2.sv
 Fsource/twiddle_index2.sv
 L0 8
@@ -543,20 +542,20 @@ R5
 !s100 LH7;W[U2ZcTNHHj@Jo4c52
 I75L]7QigU=g@3lKKI1KVU3
 R6
-Z26 !s105 twiddleRom_sv_unit
+Z25 !s105 twiddleRom_sv_unit
 S1
 R0
 w1481147012
-Z27 8source/twiddleRom.sv
-Z28 Fsource/twiddleRom.sv
+Z26 8source/twiddleRom.sv
+Z27 Fsource/twiddleRom.sv
 L0 1
 R7
 r1
 !s85 0
 31
 !s108 1481153545.762050
-Z29 !s107 source/twiddleRom.sv|
-Z30 !s90 -sv|-work|source_work|source/twiddleRom.sv|
+Z28 !s107 source/twiddleRom.sv|
+Z29 !s90 -sv|-work|source_work|source/twiddleRom.sv|
 !i113 0
 R8
 R9
@@ -567,20 +566,20 @@ R4
 !s100 ERK]CCS[0JK[B]@nISYQ20
 I9F]B@VI[D93e?H3LjAR0J2
 R6
-R26
+R25
 S1
 R0
-R13
+R12
+R26
 R27
-R28
 L0 8
 R7
 r1
 !s85 0
 31
 !s108 1481135715.485291
+R28
 R29
-R30
 !i113 0
 R8
 R9

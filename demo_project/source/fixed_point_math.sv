@@ -27,6 +27,7 @@ module fixed_point_math
 
 	end
 
-	assign product = {sign, temp_product[29 -num_decimal:num_fraction]};
+
+	assign product = {sign, temp_product[22:8]};
 
 endmodule

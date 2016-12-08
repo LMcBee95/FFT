@@ -47,7 +47,7 @@ localparam	STATE_Idle = 0,
 		STATE_WaitTimers = 14, //NEW
 		STATE_CheckFFTDone = 15,
 		STATE_LoadData = 16,
-		STATE_WaitAddress = 17;
+		STATE_WaitReadSRAM = 17; //between get address and read SRAM
 
 //State reg's
 reg [5:0] currentState;
@@ -92,8 +92,12 @@ always_comb begin
 				nextState = STATE_WaitBB;
 			end
 			else begin
-				nextState = STATE_ReadSRAM;
+				//nextState = STATE_ReadSRAM;
+				nextState = STATE_WaitReadSRAM;
 			end
+		end
+		STATE_WaitReadSRAM: begin
+			nextState = STATE_ReadSRAM;
 		end
 		STATE_ReadSRAM: begin
 			nextState = STATE_LoadController;
