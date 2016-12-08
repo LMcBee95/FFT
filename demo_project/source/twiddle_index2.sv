@@ -41,7 +41,8 @@ always_comb begin
 	end*/
 
 	
-	
+	next_k = cur_k;
+	next_index_val = cur_k;
 	
 	if(k_enable == 1'b1 && k_clear == 1'b0) begin
 		next_k = cur_k + 1;
