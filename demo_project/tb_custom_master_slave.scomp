@@ -1,9 +1,9 @@
 QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
-Start time: 18:32:24 on Dec 07,2016
+Start time: 21:07:33 on Dec 07,2016
 vlog -sv -work source_work source/tb_custom_master_slave.sv 
 -- Compiling module tb_custom_master_slave
 
 Top level modules:
 	tb_custom_master_slave
-End time: 18:32:24 on Dec 07,2016, Elapsed time: 0:00:00
+End time: 21:07:33 on Dec 07,2016, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0

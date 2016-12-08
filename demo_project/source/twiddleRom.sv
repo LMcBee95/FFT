@@ -1,4 +1,12 @@
-module twiddle_rom(
+// $Id: $
+// File name:   twiddleRom.sv
+// Created:     12/7/2016
+// Author:      Charles Li
+// Lab Section: 4
+// Version:     1.0  Initial Design Entry
+// Description: sdsd
+
+module twiddleRom(
      input wire [6:0] twiddle_index,
      output reg [15:0] twiddle_real,
      output reg [15:0] twiddle_img

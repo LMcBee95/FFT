@@ -1,5 +1,5 @@
 QuestaSim-64 vcom 10.3b Compiler 2014.05 May 29 2014
-Start time: 18:32:24 on Dec 07,2016
+Start time: 21:07:34 on Dec 07,2016
 vcom -work source_work source/on_chip_sram_wrapper.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -7,5 +7,5 @@ vcom -work source_work source/on_chip_sram_wrapper.vhd
 -- Loading package NUMERIC_STD
 -- Compiling entity on_chip_sram_wrapper
 -- Compiling architecture wrapper of on_chip_sram_wrapper
-End time: 18:32:25 on Dec 07,2016, Elapsed time: 0:00:01
+End time: 21:07:34 on Dec 07,2016, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
