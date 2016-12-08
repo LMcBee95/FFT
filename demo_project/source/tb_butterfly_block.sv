@@ -14,8 +14,6 @@ module tb_butterfly_block();
 	localparam CHECK_DELAY	= 1ns;
 	localparam CLK_PERIOD	= 10ns;
 
-	integer tb_test_case;
-
 	// Test bench dut port signals
 	reg [15:0] tb_input_1_real;
 	reg [15:0] tb_input_1_imaginary;
@@ -60,7 +58,8 @@ module tb_butterfly_block();
 		.input_1_imaginary(tb_input_1_imaginary),
 		.input_2_real(tb_input_2_real),
 		.input_2_imaginary(tb_input_2_imaginary),
-		.frequency(tb_frequency),
+		.twiddle_real(tb_twiddle_real),
+		.twiddle_imaginary(tb_twiddle_imaginary),
 		.output_1_real(tb_output_1_real),
 		.output_1_imaginary(tb_output_1_imaginary),
 		.output_2_real(tb_output_2_real),
@@ -69,16 +68,112 @@ module tb_butterfly_block();
 	// Test bench process
 	initial
 	begin
-		tb_test_case =0;
-		for(tb_test_case = 0; tb_test_case < 10;tb_test_case = tb_test_case+1)
-	begin
-		$info("input values: %d + i%d and %d + i%d",tb	
-		load_butterfly(5, 4, 3, 2, 2 , 1);
+
+		//Test 1
+
+		//ARin = 5
+		//AIin = 4
+		//BRin = 3
+		//BIin = 2
+		//TRin = 1
+		//TIin = 0
+
+		//ARout = 8
+		//AIout = 6
+		//BRout = 2
+		//BIout = 2
+
+		load_butterfly(16'b0000010100000000, 16'b0000010000000000, 16'b0000001100000000, 16'b0000001000000000, 16'b0000000100000000 , 16'b0000000000000000);
 
 		#(1);
 
 		$info("Real 1 = %d | Imag 1 = %d | Real 2 = %d | Imag 2 = %d", tb_output_1_real, tb_output_1_imaginary, tb_output_2_real, tb_output_2_imaginary);
-	end
+
+		//Test 2
+	
+		//ARin = 5
+		//AIin = 4
+		//BRin = 3
+		//BIin = 2
+		//TRin = 1
+		//TIin = 1
+
+		//ARout = 8
+		//AIout = 6
+		//BRout = 2
+		//BIout = 2
+
+		//ARout = 5
+		//AIout = 17
+		//BRout = 5
+		//BIout = -9
+
+		load_butterfly(16'b0000010100000000, 16'b0000010000000000, 16'b0000001100000000, 16'b0000001000000000, 16'b0000001000000000 , 16'b000001100000000);
+
+		#(1);
+
+		$info("Real 1 = %d | Imag 1 = %d | Real 2 = %d | Imag 2 = %d", tb_output_1_real, tb_output_1_imaginary, tb_output_2_real, tb_output_2_imaginary);
+
+		//Test 3
+
+		//ARin = -3
+		//AIin = 0.25
+		//BRin = 1
+		//BIin = 8
+		//TRin = 0.5
+		//TIin = 1
+
+		//ARout = 1.5
+		//AIout = 3.75
+		//BRout = -7.5
+		//BIout = -3.25
+
+		load_butterfly(16'b1000001100000000, 16'b0000000001000000, 16'b0000000100000000, 16'b0000100000000000, 16'b0000000010000000 , 16'b1000000010000000);
+
+		#(1);
+
+		$info("Real 1 = %d | Imag 1 = %d | Real 2 = %d | Imag 2 = %d", tb_output_1_real, tb_output_1_imaginary, tb_output_2_real, tb_output_2_imaginary);
+
+
+		//Test 4
+
+		//ARin = 0
+		//AIin = 0
+		//BRin = 0
+		//BIin = 0
+		//TRin = 0
+		//TIin = 0
+
+		//ARout = 0
+		//AIout = 0
+		//BRout = 0
+		//BIout = 0
+
+		load_butterfly(16'b0000000000000000, 16'b0000000000000000, 16'b0000000000000000, 16'b0000000000000000, 16'b0000000000000000 , 16'b0000000000000000);
+
+		#(1);
+
+		$info("Real 1 = %d | Imag 1 = %d | Real 2 = %d | Imag 2 = %d", tb_output_1_real, tb_output_1_imaginary, tb_output_2_real, tb_output_2_imaginary);
+
+		//Test 5
+
+		//ARin = -3.125
+		//AIin = 4
+		//BRin = 0
+		//BIin = 6
+		//TRin = 1
+		//TIin = 1.5
+
+		//ARout = 0
+		//AIout = 0
+		//BRout = 0
+		//BIout = 0
+
+		load_butterfly(16'b1000001100100000, 16'b0000010000000000, 16'b0000000000000000, 16'b0000011000000000, 16'b0000000100000000 , 16'b0000000110000000);
+
+		#(1);
+
+		$info("Real 1 = %d | Imag 1 = %d | Real 2 = %d | Imag 2 = %d", tb_output_1_real, tb_output_1_imaginary, tb_output_2_real, tb_output_2_imaginary);
 
 	end
 

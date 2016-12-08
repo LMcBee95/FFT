@@ -11,18 +11,37 @@ Z0 d/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project
 T_opt
 !s110 1481163445
 VEz>AKJ=2LJlfS@AT:jo`@2
-04 22 4 work tb_custom_master_slave fast 0
+Z1 04 22 4 work tb_custom_master_slave fast 0
 =3-002219a71b2e-5848c2b4-720bd-f1d
-o-quiet -auto_acc_if_foreign -work source_work -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim
+Z2 o-quiet -auto_acc_if_foreign -work source_work -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim
 n@_opt
-OL;O;10.3b;59
+Z3 OL;O;10.3b;59
+R0
+T_opt1
+!s110 1481166774
+VQ5[a2@B;DK;E5JeX>2<DK3
+R1
+=1-782bcb470901-5848cfb6-a8295-7e3e
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1481166967
+V;MoSIT3O0klzfdM9alz?43
+R1
+=1-782bcb3383d2-5848d076-1f4b7-791e
+R2
+n@_opt2
+R3
+R0
 vaddress_order
-Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1481162856
+Z4 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z5 !s110 1481167261
 !i10b 1
 !s100 A>g62;7Yz8N=g=EO1H47Z2
 I4`aQQCUZUa8iJ41JNGmPF0
-Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z6 V`JN@9S9cnhjKRR_L]QIcM3
 !s105 address_order_sv_unit
 S1
 R0
@@ -30,23 +49,23 @@ w1480976936
 8source/address_order.sv
 Fsource/address_order.sv
 L0 8
-Z4 OL;L;10.3b;59
+Z7 OL;L;10.3b;59
 r1
 !s85 0
 31
-!s108 1481162856.440799
+!s108 1481167261.113393
 !s107 source/address_order.sv|
 !s90 -sv|-work|source_work|source/address_order.sv|
 !i113 0
-Z5 o-sv -work source_work
-Z6 tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0
+Z8 o-sv -work source_work
+Z9 tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0
 vaddress_output
-R1
-R2
+R4
+R5
 !i10b 1
 !s100 C^WndA:R_?c6B<_NFD1o70
 I4QbQORUAhLM=jB`KnFYQ?2
-R3
+R6
 !s105 address_output_sv_unit
 S1
 R0
@@ -54,120 +73,120 @@ w1480885372
 8source/address_output.sv
 Fsource/address_output.sv
 L0 8
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162856.163457
+!s108 1481167260.966396
 !s107 source/address_output.sv|
 !s90 -sv|-work|source_work|source/address_output.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vbutterfly_block
-R1
-!s110 1481163438
+R4
+Z10 !s110 1481167262
 !i10b 1
 !s100 SFcmYooJljX7P0DzK_BNH3
-Id4i<`hXfmF22jzd@cLlgC1
-R3
+IYOO@^87Pz;TUVBYB4n1RK0
+R6
 !s105 butterfly_block_sv_unit
 S1
 R0
 w1481163416
-8/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/butterfly_block.sv
-F/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/butterfly_block.sv
+8source/butterfly_block.sv
+Fsource/butterfly_block.sv
 L0 9
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481163438.391468
-!s107 /home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/butterfly_block.sv|
-!s90 -reportprogress|300|-sv|-work|source_work|/home/ecegrid/a/mg103/ece337/finalProject/FFT/demo_project/source/butterfly_block.sv|
+!s108 1481167262.723329
+!s107 source/butterfly_block.sv|
+!s90 -sv|-work|source_work|source/butterfly_block.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vButterflyWrapper
-R1
-Z7 !s110 1481162861
+R4
+R10
 !i10b 1
 !s100 ?OlmnQQbJFOgghXP37H3Z1
 I31lo3d_6bDLdgCQl5fGjT2
-R3
+R6
 !s105 ButterflyWrapper_sv_unit
 S1
 R0
-Z8 w1481087444
+Z11 w1481087444
 8source/ButterflyWrapper.sv
 Fsource/ButterflyWrapper.sv
 L0 1
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162860.935424
+!s108 1481167262.896694
 !s107 source/ButterflyWrapper.sv|
 !s90 -sv|-work|source_work|source/ButterflyWrapper.sv|
 !i113 0
-R5
-R6
+R8
+R9
 n@butterfly@wrapper
 vcustom_master_slave
-R1
-Z9 !s110 1481162853
+R4
+Z12 !s110 1481167260
 !i10b 1
 !s100 125SFh90WV0zS<9dPDFo60
 IaaQGo7:YNF:G2bEO`Q5hg2
-R3
+R6
 !s105 custom_master_slave_sv_unit
 S1
 R0
-w1481058622
+w1481166577
 8source/custom_master_slave.sv
 Fsource/custom_master_slave.sv
 L0 3
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162853.250085
+!s108 1481167260.227921
 !s107 source/custom_master_slave.sv|
 !s90 -sv|-work|source_work|source/custom_master_slave.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vfixed_point_add
-R1
-!s110 1481162862
+R4
+Z13 !s110 1481167263
 !i10b 1
 !s100 iCR<QDKBX5]9aRjz^Yd8T0
 I>86Q9clZG;[5WW>aHGFCU2
-R3
+R6
 !s105 fixed_point_add_sv_unit
 S1
 R0
-R8
+R11
 8source/fixed_point_add.sv
 Fsource/fixed_point_add.sv
 L0 1
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162862.121118
+!s108 1481167263.606008
 !s107 source/fixed_point_add.sv|
 !s90 -sv|-work|source_work|source/fixed_point_add.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vfixed_point_math
-R1
-Z10 !s110 1481162858
+R4
+R10
 !i10b 1
 !s100 fl_7@f^E6k4ze4e7ldeok0
 I0]of>B4[BAf_XnWnfK_k]0
-R3
+R6
 !s105 fixed_point_math_sv_unit
 S1
 R0
@@ -175,71 +194,71 @@ w1481161711
 8source/fixed_point_math.sv
 Fsource/fixed_point_math.sv
 L0 5
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162858.543720
+!s108 1481167262.069397
 !s107 source/fixed_point_math.sv|
 !s90 -sv|-work|source_work|source/fixed_point_math.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vflex_counter
-R1
-Z11 !s110 1481162854
+R4
+R12
 !i10b 1
 !s100 ZiIg:U49`VWAh0bf?]:IE0
 IbR]o0I4`g:72gkegJaffJ3
-R3
+R6
 !s105 flex_counter_sv_unit
 S1
 R0
-Z12 w1480877937
+Z14 w1480877937
 8source/flex_counter.sv
 Fsource/flex_counter.sv
 L0 8
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162854.514464
+!s108 1481167260.693620
 !s107 source/flex_counter.sv|
 !s90 -sv|-work|source_work|source/flex_counter.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vload_controller
-R1
-R10
+R4
+R5
 !i10b 1
 !s100 m6nb2`Ga>0IQN2eBQAH9F0
 IEF2YeV:7ihBWG3K2JiloU0
-R3
+R6
 !s105 load_controller_sv_unit
 S1
 R0
-R12
+R14
 8source/load_controller.sv
 Fsource/load_controller.sv
 L0 8
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162858.233870
+!s108 1481167261.738573
 !s107 source/load_controller.sv|
 !s90 -sv|-work|source_work|source/load_controller.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vmcu2
-R1
-Z13 !s110 1481162857
+R4
+R5
 !i10b 1
 !s100 Dbdgz@IeE_cE87a0E;eX43
 Iz50lIP?iCSF=ZbjO2hPQ:1
-R3
+R6
 !s105 mcu2_sv_unit
 S1
 R0
@@ -247,47 +266,47 @@ w1481156304
 8source/mcu2.sv
 Fsource/mcu2.sv
 L0 8
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162857.034467
+!s108 1481167261.412488
 !s107 source/mcu2.sv|
 !s90 -sv|-work|source_work|source/mcu2.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vmem_buff
-R1
-R7
+R4
+R13
 !i10b 1
 !s100 PXLz=X5kmn[kbWigKAS[N2
 IlR1mENO4S3]91XiBeh2be0
-R3
+R6
 !s105 mem_buff_sv_unit
 S1
 R0
-R12
+R14
 8source/mem_buff.sv
 Fsource/mem_buff.sv
 L0 5
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162861.399192
+!s108 1481167263.020651
 !s107 source/mem_buff.sv|
 !s90 -sv|-work|source_work|source/mem_buff.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vmini_setup
-R1
-R7
+R4
+R13
 !i10b 1
 !s100 ?HQXzYSZ<KeAJ2]S_C3JF2
 IBYn1ESL_?>WR<C4i?eRD91
-R3
+R6
 !s105 mini_setup_sv_unit
 S1
 R0
@@ -295,162 +314,162 @@ w1480976189
 8source/mini_setup.sv
 Fsource/mini_setup.sv
 L0 8
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162861.743115
+!s108 1481167263.276458
 !s107 source/mini_setup.sv|
 !s90 -sv|-work|source_work|source/mini_setup.sv|
 !i113 0
-R5
-R6
+R8
+R9
 Eon_chip_sram_wrapper
-Z14 w1481135390
-Z15 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z17 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z15 w1481135390
+Z16 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z17 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z18 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z18 8source/on_chip_sram_wrapper.vhd
-Z19 Fsource/on_chip_sram_wrapper.vhd
+Z19 8source/on_chip_sram_wrapper.vhd
+Z20 Fsource/on_chip_sram_wrapper.vhd
 l0
 L17
 VI6fo1ThGGB2_LohMDZcL?1
 !s100 `jRUa^?aV_b6n;LU?g<b_2
-Z20 OL;C;10.3b;59
+Z21 OL;C;10.3b;59
 31
-R11
+R12
 !i10b 1
-Z21 !s108 1481162854.131056
-Z22 !s90 -work|source_work|source/on_chip_sram_wrapper.vhd|
-Z23 !s107 source/on_chip_sram_wrapper.vhd|
+Z22 !s108 1481167260.526722
+Z23 !s90 -work|source_work|source/on_chip_sram_wrapper.vhd|
+Z24 !s107 source/on_chip_sram_wrapper.vhd|
 !i113 0
-Z24 o-work source_work
-Z25 tExplicit 1 Coverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0
+Z25 o-work source_work
+Z26 tExplicit 1 Coverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0
 Awrapper
-R15
 R16
 R17
+R18
 DEx4 work 20 on_chip_sram_wrapper 0 22 I6fo1ThGGB2_LohMDZcL?1
 l124
 L58
 VA[V39a^J22f4d]7bhmRii2
 !s100 HGf=dX^b=izdn0eTLVaF51
-R20
-31
-R11
-!i10b 1
 R21
+31
+R12
+!i10b 1
 R22
 R23
-!i113 0
 R24
+!i113 0
 R25
+R26
 vptsWrapper
-R1
-Z26 !s110 1481162859
+R4
+R10
 !i10b 1
 !s100 VlbUDV1`[KLDG<0QVKJ6V1
 IYde0`Qh:6dX746XN46_Z_1
-R3
+R6
 !s105 ptsWrapper_sv_unit
 S1
 R0
-R12
+R14
 8source/ptsWrapper.sv
 Fsource/ptsWrapper.sv
 L0 1
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162859.003939
+!s108 1481167262.331710
 !s107 source/ptsWrapper.sv|
 !s90 -sv|-work|source_work|source/ptsWrapper.sv|
 !i113 0
-R5
-R6
+R8
+R9
 npts@wrapper
 vstpWrapper
-R1
-R26
+R4
+R10
 !i10b 1
 !s100 n1[@bn=lk0kA^4>GejJS13
 Ib30a>HUlb[6gM[bZ_I@;73
-R3
+R6
 !s105 stpWrapper_sv_unit
 S1
 R0
-R12
+R14
 8source/stpWrapper.sv
 Fsource/stpWrapper.sv
 L0 1
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162859.718142
+!s108 1481167262.596742
 !s107 source/stpWrapper.sv|
 !s90 -sv|-work|source_work|source/stpWrapper.sv|
 !i113 0
-R5
-R6
+R8
+R9
 nstp@wrapper
 vtb_custom_master_slave
-R1
-R9
+R4
+R12
 !i10b 1
 !s100 TA2XkW:EOc9^PA5QTC;^M2
 Imjhki37bMoObe:>H@z8zF2
-R3
+R6
 !s105 tb_custom_master_slave_sv_unit
 S1
 R0
-w1481159997
+w1481166756
 8source/tb_custom_master_slave.sv
 Fsource/tb_custom_master_slave.sv
 L0 6
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162853.688947
+!s108 1481167260.365774
 !s107 source/tb_custom_master_slave.sv|
 !s90 -sv|-work|source_work|source/tb_custom_master_slave.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vtimers
-R1
-R2
+R4
+R5
 !i10b 1
 !s100 cV9fI]K6bNcSU7GdFzBdh3
 Ii3aiR6jk:oO_aX@5z65n[2
-R3
+R6
 !s105 timers_sv_unit
 S1
 R0
-R12
+R14
 8source/timers.sv
 Fsource/timers.sv
 L0 8
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162856.741339
+!s108 1481167261.258709
 !s107 source/timers.sv|
 !s90 -sv|-work|source_work|source/timers.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vtwiddle_index2
-R1
-!s110 1481162855
+R4
+R12
 !i10b 1
 !s100 0Q]DiMLo<8SohUjGBA@TF1
 IH?7W3Fh`_ST_Y0^TYTSKM3
-R3
+R6
 !s105 twiddle_index2_sv_unit
 S1
 R0
@@ -458,23 +477,23 @@ w1481161748
 8source/twiddle_index2.sv
 Fsource/twiddle_index2.sv
 L0 8
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162855.210347
+!s108 1481167260.837691
 !s107 source/twiddle_index2.sv|
 !s90 -sv|-work|source_work|source/twiddle_index2.sv|
 !i113 0
-R5
-R6
+R8
+R9
 vtwiddleRom
-R1
-R13
+R4
+R5
 !i10b 1
 !s100 >=O5^DP?cQFkAZFaFKkTW2
 IB]G;Lh3h`8B=W>:dXoP632
-R3
+R6
 !s105 twiddleRom_sv_unit
 S1
 R0
@@ -482,14 +501,14 @@ w1481162822
 8source/twiddleRom.sv
 Fsource/twiddleRom.sv
 L0 9
-R4
+R7
 r1
 !s85 0
 31
-!s108 1481162857.711198
+!s108 1481167261.573730
 !s107 source/twiddleRom.sv|
 !s90 -sv|-work|source_work|source/twiddleRom.sv|
 !i113 0
-R5
-R6
+R8
+R9
 ntwiddle@rom
