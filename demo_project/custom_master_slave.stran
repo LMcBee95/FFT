@@ -9,8 +9,8 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -i -t ps source_work.tb_custom_master_slave 
-# Start time: 22:21:20 on Dec 07,2016
-# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Start time: 17:10:31 on Dec 12,2016
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading sv_std.std
 # Loading work.tb_custom_master_slave(fast)
 # Loading std.standard
@@ -21,18 +21,41 @@
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.simple_scale_mem(scaleable_memory)#1
-add wave -position end sim:/tb_custom_master_slave/sram/*
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
-# ** Error: Cannot lock WLF file: "vsim.wlf"
-#           errno 11: Resource temporarily unavailable.
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: mg103  Hostname: ecegrid-thin3.ecn.purdue.edu  ProcessID: 3869
-#           Attempting to use alternate WLF file "./wlft97CpNQ".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft97CpNQ
-add wave -position end sim:/tb_custom_master_slave/*
-# This test bench has run to completion
-# End time: 22:28:47 on Dec 07,2016, Elapsed time: 0:07:27
-# Errors: 4, Warnings: 2
+add wave -position end  sim:/tb_custom_master_slave/tb_clk
+add wave -position end  sim:/tb_custom_master_slave/tb_n_rst
+add wave -position end  sim:/tb_custom_master_slave/tb_slave_read
+add wave -position end  sim:/tb_custom_master_slave/tb_slave_address
+add wave -position end  sim:/tb_custom_master_slave/tb_slave_writedata
+add wave -position end  sim:/tb_custom_master_slave/tb_slave_chipselect
+add wave -position end  sim:/tb_custom_master_slave/tb_master_address
+add wave -position end  sim:/tb_custom_master_slave/tb_test_slave_read
+add wave -position end  sim:/tb_custom_master_slave/tb_test_slave_write
+add wave -position end  sim:/tb_custom_master_slave/tb_test_slave_writedata
+add wave -position end  sim:/tb_custom_master_slave/tb_test_slave_chipselect
+add wave -position end  sim:/tb_custom_master_slave/tb_slave_waitrequest
+add wave -position end  sim:/tb_custom_master_slave/tb_master_writedata
+add wave -position 8  sim:/tb_custom_master_slave/tb_master_write
+add wave -position 8  sim:/tb_custom_master_slave/tb_master_read
+add wave -position end  sim:/tb_custom_master_slave/tb_master_readdatavalid
+add wave -position end  sim:/tb_custom_master_slave/tb_master_waitrequest
+add wave -position end  sim:/tb_custom_master_slave/f_wren
+add wave -position end  sim:/tb_custom_master_slave/f_rden
+add wave -position end  sim:/tb_custom_master_slave/f_data
+add wave -position end  sim:/tb_custom_master_slave/f_address
+add wave -position end  sim:/tb_custom_master_slave/f_q
+add wave *
+add wave -position 2  sim:/tb_custom_master_slave/DUT/fft_start
+add wave -position 5  sim:/tb_custom_master_slave/DUT/fft_done
+run 1 ms
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_custom_master_slave/sram/MEM
+# ** Info: Dumping Avalon Input
+#    Time: 40870 ns  Scope: tb_custom_master_slave File: source/tb_custom_master_slave.sv Line: 199
+# ** Info: Initalizing the SRAM to file input
+#    Time: 40890 ns  Scope: tb_custom_master_slave File: source/tb_custom_master_slave.sv Line: 208
+# ** Info: Dumping FFT processed Data
+#    Time: 960010 ns  Scope: tb_custom_master_slave File: source/tb_custom_master_slave.sv Line: 245
+add wave -position 5  sim:/tb_custom_master_slave/tb_slave_write
+# This test bench was not run long enough to execute all test cases. Please run this test bench for at least a total of ns
+# End time: 17:25:54 on Dec 12,2016, Elapsed time: 0:15:23
+# Errors: 0, Warnings: 1

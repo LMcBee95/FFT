@@ -5,7 +5,7 @@
 
 module tb_custom_master_slave
 ();
-localparam	CLK_PERIOD	= 10;
+localparam	CLK_PERIOD	= 20;
 localparam MASTER_ADDRESSWIDTH = 32 ;  	// ADDRESSWIDTH specifies how many addresses the Master can address 
 localparam SLAVE_ADDRESSWIDTH = 9 ;// ADDRESSWIDTH specifies how many addresses the slave needs to be mapped to. log(NUMREGS)
 localparam DATAWIDTH = 32 ;// DATAWIDTH specifies the data width. Default 32 bits
@@ -164,13 +164,14 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 
 //Reset the whole system
 	tb_test_rst = 1'b1;
-#5;
+	@(posedge tb_clk);
 	tb_test_rst = 1'b0;
-#5;
+	@(posedge tb_clk);
 	tb_test_rst = 1'b1;
 //Write into the memory
-#10
-	for(tb_test_case =0; tb_test_case < 510;tb_test_case = tb_test_case +1)
+	@(posedge tb_clk);
+	@(posedge tb_clk);
+	for(tb_test_case =0; tb_test_case < 512;tb_test_case = tb_test_case +1)
 	begin
 	tb_test_slave_write = 1'b1;
 	tb_test_slave_address =tb_test_case;
@@ -183,13 +184,16 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 	begin
 		tb_test_slave_writedata = 16'b0000000000000000;
 	end
+
 	tb_test_slave_chipselect = 1'b1;
-#30;
+	@(posedge tb_clk);
+	@(posedge tb_clk);
+	@(posedge tb_clk);
 	tb_test_slave_write = 1'b0;
 	tb_test_slave_address =9'h00;
 	tb_test_slave_writedata = 16'hf0f0;
 	tb_test_slave_chipselect = 1'b0;
-#10;
+	@(posedge tb_clk);
 	end
 //Write to start the process
 		$info("Dumping Avalon Input");
@@ -200,20 +204,22 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 		#CLK_PERIOD;
 		
 		tb_mem_dump	<= 0;
-#10;
+/*	@(posedge tb_clk);
 	$info("Initalizing the SRAM to file input");
 	tb_mem_init					<= 1;
 	tb_init_file_number	<= 0;
 	#CLK_PERIOD;
 		
 	tb_mem_init	<= 0;
-#30;
+	@(posedge tb_clk);
 	tb_test_slave_read = 1'b0;
 	tb_test_slave_write = 1'b1;
 	tb_test_slave_address =9'h1ff;
 	tb_test_slave_writedata = 16'h0000;
-	tb_test_slave_chipselect = 1'b1;
-#10;
+	tb_test_slave_chipselect = 1'b1;*/
+	@(posedge tb_clk);
+
+
 	tb_test_slave_read = 1'b0;
 	tb_test_slave_write = 1'b0;
 	tb_test_slave_address =9'h000;
@@ -222,14 +228,16 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 //pull mem_init high inorder to initilize it to an input file
 
 
-#10;
+	@(posedge tb_clk);
 	@(posedge tb_master_write);
 	for(tb_test_case = 0;tb_test_case <512;tb_test_case = tb_test_case +1)
 	begin
 	tb_test_master_waitrequest = 1'b1;
-	#30;
+	@(posedge tb_clk);
+	@(posedge tb_clk);
+	@(posedge tb_clk);
 	tb_test_master_waitrequest = 1'b0;
-	#10;
+	@(posedge tb_clk);
 
 
 	end
