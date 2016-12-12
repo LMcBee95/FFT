@@ -204,7 +204,7 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 		#CLK_PERIOD;
 		
 		tb_mem_dump	<= 0;
-/*	@(posedge tb_clk);
+	@(posedge tb_clk);
 	$info("Initalizing the SRAM to file input");
 	tb_mem_init					<= 1;
 	tb_init_file_number	<= 0;
@@ -216,7 +216,7 @@ reg tb_mem_init;	// Active high strobe for at least 1 simulation timestep to set
 	tb_test_slave_write = 1'b1;
 	tb_test_slave_address =9'h1ff;
 	tb_test_slave_writedata = 16'h0000;
-	tb_test_slave_chipselect = 1'b1;*/
+	tb_test_slave_chipselect = 1'b1;
 	@(posedge tb_clk);
 
 
