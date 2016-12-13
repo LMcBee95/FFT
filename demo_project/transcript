@@ -81,3 +81,4 @@ run 1 ms
 #    Time: 41050 ns  Scope: tb_custom_master_slave File: source/tb_custom_master_slave.sv Line: 208
 # ** Info: Dumping FFT processed Data
 #    Time: 960050 ns  Scope: tb_custom_master_slave File: source/tb_custom_master_slave.sv Line: 245
+add wave -position end  sim:/tb_custom_master_slave/DUT/FFT_BLOCK/output_value
