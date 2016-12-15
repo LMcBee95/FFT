@@ -1,0 +1,10 @@
+Wed Dec 07 21:36:31 EST 2016
+Trace back: grab failed: another application has grab
+    while executing
+"grab -global $menu"
+    (procedure "tk::MenuButtonDown" line 40)
+    invoked from within
+"tk::MenuButtonDown .#mBar"
+    (command bound to event)
+  <2:/package/eda/mg/questa10.3b/questasim/linux_x86_64/tk8.5/bgerror.tcl:92: ::tkerror {grab failed: another application has grab}
+  <1:eval:1: ::tk::dialog::error::bgerror {grab failed: another application has grab}
